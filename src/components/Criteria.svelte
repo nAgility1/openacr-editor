@@ -6,6 +6,7 @@
   export let chapterId;
   export let chapterLink;
   export let id;
+  export let short_label;
   export let alt_id;
   export let handle;
   export let components = [];
@@ -13,6 +14,7 @@
 
   $: linkToImplementing = `${chapterLink}#${alt_id}`;
   $: disabled = ($evaluation['chapters'][chapterId]['disabled']) ? 'disabled' : '';
+  $: shouldAppendWCAG = short_label === 'A' || short_label === 'AA';
 </script>
 
 <style>
@@ -30,7 +32,7 @@
 <div {id} class="criteria">
   <details>
     <summary>
-      <HeaderWithAnchor id="{id}" level=2>{id}: {handle}</HeaderWithAnchor>
+      <HeaderWithAnchor id="{id}" level=2>{#if shouldAppendWCAG}WCAG SC {/if} {id}: {handle}</HeaderWithAnchor>
     </summary>
     {#if !disabled}
       <span class="observation__meta">
