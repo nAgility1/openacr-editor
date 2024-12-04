@@ -1,6 +1,7 @@
 <script>
   export let id;
   export let level;
+  export let link;
   export let download = false;
 
   const extraId = download ? "-download" : "-editor";
@@ -64,7 +65,7 @@
 {#if level == 2}
   <h2 id="{id}{extraId}">
     <slot />
-    <a href="#{id}{extraId}" class="header-anchor" aria-labelledby="{id}{extraId}">
+    <a href="{link}" class="header-anchor" aria-labelledby="{id}{extraId}">
       <span class="anchor-icon" aria-hidden="true">
         <svg
           focusable="false"

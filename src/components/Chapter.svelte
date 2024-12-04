@@ -75,7 +75,7 @@
   <ExpandCollapseAll />
 
   {#each currentChapter.criteria as criteria, i (criteria.id)}
-    <Criteria short_label={currentChapter.short_label} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
+    <Criteria short_label={currentChapter.short_label} link={currentChapter.link}} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
   {/each}
 
   <Pager label="Previous/Next Chapter">
