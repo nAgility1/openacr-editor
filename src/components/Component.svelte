@@ -58,7 +58,7 @@
 </style>
 
 {#if currentComponent.label }
-  <HeaderWithAnchor id="{criteria}-{component}" level=3 componenturl={currentComponent.url}>{currentComponent.label}</HeaderWithAnchor>
+  <HeaderWithAnchor id="{criteria}-{component}" level=3 componentUrl={currentComponent.url}>{currentComponent.label}</HeaderWithAnchor>
 {:else}
   <br/><br/>
 {/if}
