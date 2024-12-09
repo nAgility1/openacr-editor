@@ -33,7 +33,7 @@
 <div {id} class="criteria">
   <details>
     <summary>
-      <HeaderWithAnchor id="{id}" level=2 levelurl="{url}">{#if shouldAppendWCAG}WCAG SC {/if} {id}: {handle}</HeaderWithAnchor>
+      <HeaderWithAnchor id="{id}" level=2 criteriaUrl="{url}">{#if shouldAppendWCAG}WCAG SC {/if} {id}: {handle}</HeaderWithAnchor>
     </summary>
     {#if !disabled}
       <span class="observation__meta">
