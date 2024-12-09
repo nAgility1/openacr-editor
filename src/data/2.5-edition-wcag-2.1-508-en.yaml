@@ -35,11 +35,67 @@ chapters:
           - captcha
           - image-text
           - audible-cues
+      - id: 1.2.1
+        handle: Audio-only and Video-only (Prerecorded)
+        alt_id: audio-only-and-video-only-prerecorded
+        components:
+          - web
+          - electronic-docs
+          - software
+          - authoring-tool
+      - id: 1.2.2
+        handle: Captions (Prerecorded)
+        alt_id: captions-prerecorded
+        components:
+          - web
+          - electronic-docs
+          - software
+          - authoring-tool
+      - id: 1.2.3
+        handle: Audio Description or Media Alternative (Prerecorded)
+        alt_id: audio-description-or-media-alternative-prerecorded
+        components:
+          - web
+          - electronic-docs
+          - software
+          - authoring-tool
+      - id: 1.3.1
+        handle: Info and Relationships
+        alt_id: info-and-relationships
+        components:
+          - web
+          - electronic-docs
+          - software
+          - authoring-tool
+      - id: 1.3.2
+        handle: Meaningful Sequence
+        alt_id: meaningful-sequence
+        components:
+          - web
+          - electronic-docs
+          - software
+          - authoring-tool
+      - id: 1.3.3
+        handle: Sensory Characteristics
+        alt_id: sensory-characteristics
+        components:
+          - web
+          - electronic-docs
+          - software
+          - authoring-tool
       - id: 1.4.1
         handle: Use of Color
         alt_id: use-of-color
         components:
           - color
+      - id: 1.4.2
+        handle: Audio Control
+        alt_id: audio-control
+        components:
+          - web
+          - electronic-docs
+          - software
+          - authoring-tool
       - id: 1.4.13
         handle: Content on Hover or Focus
         alt_id: content-on-hover-or-focus
@@ -54,11 +110,13 @@ chapters:
       - id: 2.1.2
         handle: No Keyboard Trap
         alt_id: no-keyboard-trap
+        url: https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap
         components:
           - no-keyboard-trap
       - id: 2.1.4
         handle: Character Key Shortcuts
         alt_id: character-key-shortcuts
+        url: https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts
         components:
           - key-shortcuts
       - id: 2.2.1
@@ -88,8 +146,10 @@ chapters:
       - id: 2.4.1
         handle: Bypass Blocks
         alt_id: bypass-blocks
+        url: https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks
         components:
           - focus-visible
+          - bypass-blocks
       - id: 2.4.2
         handle: Page Titled
         alt_id: page-titled
@@ -101,6 +161,7 @@ chapters:
       - id: 2.4.3
         handle: Focus Order
         alt_id: focus-order
+        url: https://www.w3.org/WAI/WCAG22/Understanding/focus-order
         components:
           - focus-order
       - id: 2.4.4
@@ -114,11 +175,13 @@ chapters:
       - id: 2.4.7
         handle: Focus Visible
         alt_id: focus-visible
+        url: https://www.w3.org/WAI/WCAG22/Understanding/focus-visible
         components:
           - web
           - electronic-docs
           - software
           - authoring-tool
+          - focus-visible
       - id: 2.5.1
         handle: Pointer Gestures
         alt_id: pointer-gestures
@@ -162,6 +225,7 @@ chapters:
       - id: 3.2.1
         handle: On Focus
         alt_id: on-focus
+        url: https://www.w3.org/WAI/WCAG22/Understanding/on-focus
         components:
           - on-focus
       - id: 3.2.2
@@ -265,6 +329,7 @@ chapters:
           - electronic-docs
           - software
           - authoring-tool
+          - image-text
       - id: 1.4.10
         handle: Reflow
         alt_id: reflow
@@ -292,6 +357,7 @@ chapters:
       - id: 1.4.13
         handle: Content on Hover or Focus
         alt_id: content-on-hover-or-focus
+        url: https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus
         components:
           - web
           - electronic-docs
