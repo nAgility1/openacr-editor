@@ -5,10 +5,6 @@
   export let download = false;
 
   const extraId = download ? "-download" : "-editor";
-  console.log("id: ", String(id));
-  console.log("extraId: ", extraId);
-  console.log("level: ", level);
-  console.log("url: ", url);
 </script>
 
 <style>
