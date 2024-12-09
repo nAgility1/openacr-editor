@@ -5,6 +5,10 @@
   export let download = false;
 
   const extraId = download ? "-download" : "-editor";
+  console.log("id: ", String(id));
+  console.log("extraId: ", extraId);
+  console.log("level: ", level);
+  console.log("url: ", url);
 </script>
 
 <style>
@@ -65,7 +69,8 @@
 {#if level == 2}
   <h2 id="{id}{extraId}">
     <slot />
-    <a href="{url}" class="header-anchor" aria-labelledby="{id}{extraId}">
+    {#if url}
+    <a href={url} class="header-anchor" aria-labelledby="test{id}{extraId}">
       <span class="anchor-icon" aria-hidden="true">
         <svg
           focusable="false"
@@ -76,8 +81,22 @@
       </span>
       <span class="visuallyhidden">Anchor link</span>
     </a>
+    {:else}
+    <a href="#{id}{extraId}" class="header-anchor" aria-labelledby="{id}{extraId}">
+      <span class="anchor-icon" aria-hidden="true">
+        <svg
+          focusable="false"
+          aria-hidden="true"
+          class="icon-link">
+            <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+        </svg>
+      </span>
+      <span class="visuallyhidden">Anchor link</span>
+    </a>
+    {/if}
   </h2>
 {/if}
+
 
 {#if level == 3}
   <h3 id="{id}{extraId}">
