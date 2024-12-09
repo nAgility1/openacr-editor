@@ -48,7 +48,7 @@ chapters:
       - id: 2.1.1
         handle: Keyboard
         alt_id: keyboard
-        link: https://www.w3.org/WAI/WCAG22/Understanding/keyboard
+        url: https://www.w3.org/WAI/WCAG22/Understanding/keyboard
         components:
           - keyboard-access
       - id: 2.1.2

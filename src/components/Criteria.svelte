@@ -7,7 +7,7 @@
   export let chapterLink;
   export let id;
   export let short_label;
-  export let link;
+  export let url;
   export let alt_id;
   export let handle;
   export let components = [];
@@ -33,7 +33,7 @@
 <div {id} class="criteria">
   <details>
     <summary>
-      <HeaderWithAnchor id="{id}" level=2 link="{link}">{#if shouldAppendWCAG}WCAG SC {/if} {id}: {handle}</HeaderWithAnchor>
+      <HeaderWithAnchor id="{id}" level=2 url="{url}">{#if shouldAppendWCAG}WCAG SC {/if} {id}: {handle}</HeaderWithAnchor>
     </summary>
     {#if !disabled}
       <span class="observation__meta">
