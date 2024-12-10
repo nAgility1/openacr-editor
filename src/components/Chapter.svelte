@@ -20,6 +20,21 @@
   let standards = catalog.standards;
   let chapters = catalog.chapters;
 
+  function renderCriteria(criteriaId) {
+    const criteria = currentChapter.criteria.find(c => c.id === criteriaId);
+    if (criteria) {
+      return {
+        short_label: currentChapter.short_label,
+        url: criteria.id || null,
+        chapterId: chapterId,
+        chapterLink: currentStandard.url,
+        ...criteria
+      };
+    }
+    return {};
+  }
+
+  // reactive statements and lifecycle methods
   const location = useLocation();
   $: currentChapter = chapters.find( ({ id }) => id === chapterId);
   $: currentChapterKey = chapters.findIndex( ({ id }) => id === chapterId);
@@ -30,6 +45,7 @@
 
     honourFragmentIdLinks($location);
   });
+
 </script>
 
 <svelte:head>
@@ -74,9 +90,12 @@
 
   <ExpandCollapseAll />
 
+  <!-- 
   {#each currentChapter.criteria as criteria, i (criteria.id)}
     <Criteria short_label={currentChapter.short_label} url={i.url || null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
-  {/each}
+  {/each} -->
+
+  <Criteria {...renderCriteria('2.1.1')} />
 
   <Pager label="Previous/Next Chapter">
     {#if chapterId === "success_criteria_level_a"}
