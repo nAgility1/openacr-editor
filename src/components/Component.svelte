@@ -11,6 +11,7 @@
   let components = catalog.components;
   let terms = catalog.terms;
 
+
   $: currentComponent = components.find( ({ id }) => id === component);
   $: currentEvaluationCriteria = ($evaluation['chapters'] && $evaluation['chapters'][chapterId]['criteria']) ? $evaluation['chapters'][chapterId]['criteria'].find( ({ num }) => num === criteria) : null;
   $: currentEvaluationComponent = (currentEvaluationCriteria) ? currentEvaluationCriteria.components.find( ({ name }) => name === component) : null;
@@ -55,10 +56,11 @@
     display: inline-block;
     padding: 0 6px 0 0;
   }
+
 </style>
 
 {#if currentComponent.label }
-  <HeaderWithAnchor id="{criteria}-{component}" level=3 componentUrl={currentComponent.url}>{currentComponent.label}</HeaderWithAnchor>
+  <HeaderWithAnchor id="{criteria}-{component}" level=3 url={currentComponent.url || null}>{currentComponent.label}</HeaderWithAnchor>
 {:else}
   <br/><br/>
 {/if}
