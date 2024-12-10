@@ -9,33 +9,33 @@
 </script>
 
 <style>
-  h2,
-  h3 {
+  h3,
+  h4 {
     position: relative;
   }
-  h2 a.header-anchor,
-  h3 a.header-anchor {
+  h3 a.header-anchor,
+  h4 a.header-anchor {
     position: absolute;
     left: -2rem;
   }
-  h2 a.header-anchor:hover svg,
-  h2 a.header-anchor:focus svg,
-  h2 a.header-anchor:focus-within svg,
   h3 a.header-anchor:hover svg,
   h3 a.header-anchor:focus svg,
-  h3 a.header-anchor:focus-within svg {
+  h3 a.header-anchor:focus-within svg,
+  h4 a.header-anchor:hover svg,
+  h4 a.header-anchor:focus svg,
+  h4 a.header-anchor:focus-within svg {
     fill: #0000EE;
     opacity: 1;
   }
-  h2 a.header-anchor svg,
-  h3 a.header-anchor svg {
+  h3 a.header-anchor svg,
+  h4 a.header-anchor svg {
     width: 28px;
     height: 28px;
     opacity: .3;
   }
   @media all and (max-width: 63.99em) {
-    h2 a.header-anchor,
-    h3 a.header-anchor {
+    h3 a.header-anchor,
+    h4 a.header-anchor {
       position:relative;
       opacity: 1;
       left: 0;
@@ -58,13 +58,13 @@
     font-size: large;
     opacity: 1;
   }
-  summary>h3:first-child:before {
+  summary>h4:first-child:before {
     line-height: 1.2;
   }
 </style>
 
 {#if level == 2}
-  <h2 id="{id}{extraId}">
+  <h3 id="{id}{extraId}">
     <slot />
     <a href={url ? url : `#${id}${extraId}`} class="header-anchor" aria-labelledby="test{id}{extraId}">
       <span class="anchor-icon" aria-hidden="true">
@@ -77,12 +77,12 @@
       </span>
       <span class="visuallyhidden">Anchor link</span>
     </a>
-  </h2>
+  </h3>
 {/if}
 
 
 {#if level == 3}
-  <h3 id="{id}{extraId}">
+  <h4 id="{id}{extraId}">
     <slot />
     <a href="{url ? url : `#${id}${extraId}`}" class="header-anchor" aria-labelledby="{id}{extraId}">
       <span class="anchor-icon" aria-hidden="true">
@@ -95,5 +95,5 @@
       </span>
       <span class="visuallyhidden">Anchor link</span>
     </a>
-  </h3>
+  </h4>
 {/if}
