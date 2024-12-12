@@ -90,14 +90,19 @@
 
   <ExpandCollapseAll />
 
-  
-  {#each currentChapter.criteria as criteria, i (criteria.id)}
-    {#if currentChapter.criteria.short_label === "A"}
-    {/if}
-    <Criteria short_label={currentChapter.short_label} url={i.url || null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
-  {/each}
+  {#if currentChapter.short_label === "A"}
+    {#each currentChapter.criteria as criteria, i (criteria.id)}
+        {#if criteria.section }
+          <h2 id={criteria.section_id}{criteria.section}>{criteria.section_id}. {criteria.section}</h2>
+        {/if}
+        <Criteria short_label={currentChapter.short_label} url={i.url || null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
+    {/each}
+  {:else}
+    {#each currentChapter.criteria as criteria, i (criteria.id)}
+      <Criteria short_label={currentChapter.short_label} url={i.url || null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
+    {/each}
+  {/if}
 
-  <!-- <Criteria {...renderCriteria('2.1.1')} /> -->
 
   <Pager label="Previous/Next Chapter">
     {#if chapterId === "success_criteria_level_a"}

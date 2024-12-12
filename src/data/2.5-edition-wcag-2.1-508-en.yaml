@@ -38,7 +38,6 @@ chapters:
         handle: No Keyboard Trap
         alt_id: no-keyboard-trap
         section_id: 1
-        section: Keyboard Accessible
         url: https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap
         components:
           - no-keyboard-trap
@@ -46,7 +45,6 @@ chapters:
         handle: Character Key Shortcuts
         alt_id: character-key-shortcuts
         section_id: 1
-        section: Keyboard Accessible
         url: https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts
         components:
           - key-shortcuts
