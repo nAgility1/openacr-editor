@@ -1,12 +1,12 @@
 /// <reference types="Cypress" />
 
-const catalogs = ["2.4-edition-wcag-2.1-en", "2.4-edition-wcag-2.0-508-en"];
+const catalogs = ["2.5-edition-wcag-2.1-508-en", "2.5-edition-wcag-2.2-508-en"];
 const chapters = [
   "success_criteria_level_a",
   "success_criteria_level_aa",
   "success_criteria_level_aaa",
 ];
-const wcag21Criteria = "2.1.4";
+const wcag22Criteria = "2.2.5";
 
 describe("Catalogs", () => {
   catalogs.forEach((catalog) => {
@@ -42,41 +42,41 @@ describe("Catalogs", () => {
     });
   });
 
-  it("toggle catalog, confirm and check for WCAG 2.1 criteria appearing and disappearing", () => {
+  it("toggle catalog, confirm and check for WCAG 2.2 criteria appearing and disappearing", () => {
     cy.visit("/about");
 
-    // Switch to WCAG 2.1 catalog.
-    cy.get("input[value='2.4-edition-wcag-2.1-en']").check();
+    // Switch to WCAG 2.2 catalog.
+    cy.get("input[value='2.5-edition-wcag-2.2-508-en']").check();
 
     cy.get("button").contains("Switch Catalogs").click();
 
     cy.visit("/chapter/success_criteria_level_a");
 
-    cy.get(`div[id="${wcag21Criteria}"]`).should("exist");
+    cy.get(`div[id="${wcag22Criteria}"]`).should("exist");
 
     cy.get("button").contains("View Report").click();
 
     cy.get("#success_criteria_level_a-editor + table tbody tr").should(
       "contain",
-      wcag21Criteria
+      wcag22Criteria
     );
 
     cy.visit("/about");
 
-    // Switch back to WCAG 2.0 508 catalog.
-    cy.get("input[value='2.4-edition-wcag-2.0-508-en']").check();
+    // Switch back to WCAG 2.1 508 catalog.
+    cy.get("input[value='2.5-edition-wcag-2.1-508-en']").check();
 
     cy.get("button").contains("Switch Catalogs").click();
 
     cy.visit("/chapter/success_criteria_level_a");
 
-    cy.get(`div[id="${wcag21Criteria}"]`).should("not.exist");
+    cy.get(`div[id="${wcag22Criteria}"]`).should("not.exist");
 
     cy.get("button").contains("View Report").click();
 
     cy.get("#success_criteria_level_a-editor + table tbody tr").should(
       "not.contain",
-      wcag21Criteria
+      wcag22Criteria
     );
   });
 
@@ -85,8 +85,8 @@ describe("Catalogs", () => {
 
     cy.on("window:confirm", cy.stub().as("confirmation"));
 
-    // Switch to WCAG 2.1 catalog.
-    cy.get("input[value='2.4-edition-wcag-2.1-en']").check();
+    // Switch to WCAG 2.2 catalog.
+    cy.get("input[value='2.5-edition-wcag-2.2-en']").check();
 
     cy.get("button").contains("Switch Catalogs").click();
 
@@ -101,12 +101,12 @@ describe("Catalogs", () => {
   it("toggle catalog and reset it", () => {
     cy.visit("/about");
 
-    // Switch to WCAG 2.1 catalog.
-    cy.get("input[value='2.4-edition-wcag-2.1-en']").check();
+    // Switch to WCAG 2.2 catalog.
+    cy.get("input[value='2.5-edition-wcag-2.2-en']").check();
 
     cy.get("button").contains("Reset").click();
 
-    cy.get(`input[value="2.4-edition-wcag-2.1-508-en"]`).should("be.checked");
+    cy.get(`input[value="2.5-edition-wcag-2.2-508-en"]`).should("be.checked");
   });
 
   it("toggle catalog and cancel confirmation", () => {
@@ -115,8 +115,8 @@ describe("Catalogs", () => {
     // Cancel the confirmation of toggling the catalog.
     cy.on("window:confirm", () => false);
 
-    // Switch to WCAG 2.1 catalog.
-    cy.get("input[value='2.4-edition-wcag-2.1-en']").check();
+    // Switch to WCAG 2.2 catalog.
+    cy.get("input[value='2.5-edition-wcag-2.2-en']").check();
 
     cy.get("button").contains("Switch Catalogs").click();
 
@@ -124,7 +124,7 @@ describe("Catalogs", () => {
 
     cy.get("#content").should(
       "contain",
-      "Based on VPAT® 2.4 WCAG 2.1 and Revised Section 508 Edition"
+      "Based on VPAT® 2.5 WCAG 2.2 and Revised Section 508 Edition"
     );
   });
 });
