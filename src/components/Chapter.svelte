@@ -95,11 +95,11 @@
         {#if criteria.section }
           <h2 id={criteria.section_id}{criteria.section}>{criteria.section_id}. {criteria.section}</h2>
         {/if}
-        <Criteria short_label={currentChapter.short_label} url={i.url || null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
+        <Criteria short_label={currentChapter.short_label} url={i.handle ? i.handle.split('-')[1] : null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
     {/each}
   {:else}
     {#each currentChapter.criteria as criteria, i (criteria.id)}
-      <Criteria short_label={currentChapter.short_label} url={i.url || null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
+      <Criteria short_label={currentChapter.short_label} url={i.handle ? i.handle.split('-')[1] : null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
     {/each}
   {/if}
 
