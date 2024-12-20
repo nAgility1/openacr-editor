@@ -44,7 +44,7 @@
 
   // reactive statements and lifecycle methods
   const location = useLocation();
-  // Add the following debug to check duplicate IDs in yaml
+  // **** Add the following debug to check duplicate IDs in yaml
   $: currentChapter = chapters.find( ({ id }) => id === chapterId);
   $: {
     console.log('Criteria IDs:', currentChapter.criteria.map(c => c.id));
@@ -53,7 +53,7 @@
       .filter((id, index, array) => array.indexOf(id) !== index);
     console.log('Duplicate IDs:', duplicateIds);
   }
-  // End the following debug to check duplicate IDs in yaml
+  // **** End the following debug to check duplicate IDs in yaml
   $: currentChapterKey = chapters.findIndex( ({ id }) => id === chapterId);
   $: currentStandard = standards.find( ({ chapters }) => chapters.includes(chapterId));
 
@@ -112,11 +112,19 @@
         {#if criteria.description }
           <h2 id={criteria.description}>{criteria.description}</h2>
         {/if}
-        <Criteria short_label={currentChapter.short_label} url={i.handle ? i.handle.split('-')[1] : null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
+        <Criteria 
+          short_label={currentChapter.short_label} 
+          url={i.handle ? i.handle.substring(i.handle.indexOf('-') + 1) : null} 
+          chapterId={chapterId} 
+          chapterLink={currentStandard.url} 
+          id={criteria.id}
+          alt_id={criteria.alt_id}
+          handle={criteria.handle}
+          components={criteria.components}/>
     {/each}
   {:else}
     {#each currentChapter.criteria as criteria, i (criteria.id)}
-      <Criteria short_label={currentChapter.short_label} url={i.handle ? i.handle.split('-')[1] : null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
+      <Criteria short_label={currentChapter.short_label} url={i.handle ? i.substring(i.indexOf('-') + 1): null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
     {/each}
   {/if}
 
