@@ -114,7 +114,7 @@
         {/if}
         <Criteria 
           short_label={currentChapter.short_label} 
-          url={i.handle ? i.handle.substring(i.handle.indexOf('-') + 1) : null} 
+          url={criteria.handle ? criteria.handle.substring(criteria.handle.indexOf('-') + 1) : null} 
           chapterId={chapterId} 
           chapterLink={currentStandard.url} 
           id={criteria.id}
@@ -124,7 +124,7 @@
     {/each}
   {:else}
     {#each currentChapter.criteria as criteria, i (criteria.id)}
-      <Criteria short_label={currentChapter.short_label} url={i.handle ? i.substring(i.indexOf('-') + 1): null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
+      <Criteria short_label={currentChapter.short_label} url={i.handle ? criteria.substring(criteria.indexOf('-') + 1): null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
     {/each}
   {/if}
 
