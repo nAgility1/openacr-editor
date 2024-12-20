@@ -60,7 +60,7 @@
 </style>
 
 {#if currentComponent.label }
-  <HeaderWithAnchor id="{criteria}-{component}" level=3 url={currentComponent.url || null}>{currentComponent.label}</HeaderWithAnchor>
+  <HeaderWithAnchor id="{criteria}-{component}" level=3 url={currentComponent.description || null}>{currentComponent.label}</HeaderWithAnchor>
 {:else}
   <br/><br/>
 {/if}

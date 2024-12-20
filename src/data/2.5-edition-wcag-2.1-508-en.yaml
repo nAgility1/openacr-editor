@@ -94,13 +94,6 @@ chapters:
         alt_id: consistent-identification
         components:
           - consistent-identification
-      - id: 1.4.13
-        handle: >-
-          Content on Hover or
-          Focus-https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus
-        alt_id: content-on-hover-or-focus
-        components:
-          - bypass-blocks
       - id: 4.1.2
         handle: >-
           Name, Role,

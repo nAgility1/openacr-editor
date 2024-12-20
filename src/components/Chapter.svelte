@@ -21,22 +21,39 @@
   let chapters = catalog.chapters;
 
   function renderCriteria(criteriaId) {
-    const criteria = currentChapter.criteria.find(c => c.id === criteriaId);
-    if (criteria) {
-      return {
-        short_label: currentChapter.short_label,
-        url: criteria.id || null,
-        chapterId: chapterId,
-        chapterLink: currentStandard.url,
-        ...criteria
-      };
+    try {
+      const criteria = currentChapter.criteria.find(c => c.id === criteriaId);
+      if (!criteria) {
+        console.warn(`Criteria not found for ID: ${criteriaId}`);
+        return {};
+      }
+      if (criteria) {
+        return {
+          short_label: currentChapter.short_label,
+          url: criteria.id || null,
+          chapterId: chapterId,
+          chapterLink: currentStandard.url,
+          ...criteria
+        };
+      }
+    } catch (error) {
+      console.error(`Error rendering criteria ${criteriaId}:`, error);
+      return {};
     }
-    return {};
   }
 
   // reactive statements and lifecycle methods
   const location = useLocation();
+  // Add the following debug to check duplicate IDs in yaml
   $: currentChapter = chapters.find( ({ id }) => id === chapterId);
+  $: {
+    console.log('Criteria IDs:', currentChapter.criteria.map(c => c.id));
+    const duplicateIds = currentChapter.criteria
+      .map(c => c.id)
+      .filter((id, index, array) => array.indexOf(id) !== index);
+    console.log('Duplicate IDs:', duplicateIds);
+  }
+  // End the following debug to check duplicate IDs in yaml
   $: currentChapterKey = chapters.findIndex( ({ id }) => id === chapterId);
   $: currentStandard = standards.find( ({ chapters }) => chapters.includes(chapterId));
 
@@ -92,8 +109,8 @@
 
   {#if currentChapter.short_label === "A"}
     {#each currentChapter.criteria as criteria, i (criteria.id)}
-        {#if criteria.section }
-          <h2 id={criteria.section_id}{criteria.section}>{criteria.section_id}. {criteria.section}</h2>
+        {#if criteria.description }
+          <h2 id={criteria.description}>{criteria.description}</h2>
         {/if}
         <Criteria short_label={currentChapter.short_label} url={i.handle ? i.handle.split('-')[1] : null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>
     {/each}
@@ -123,3 +140,4 @@
     {/if}
   </Pager>
 </div>
+
