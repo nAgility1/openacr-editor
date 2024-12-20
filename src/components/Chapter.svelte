@@ -107,7 +107,22 @@
 
   <ExpandCollapseAll />
 
-  {#if currentChapter.short_label === "A"}
+  {#if chapterId === "success_criteria_level_a" && currentChapter.short_label === "A"}
+    {#each currentChapter.criteria as criteria, i (criteria.id)}
+        {#if criteria.description }
+          <h2 id={criteria.description}>{criteria.description}</h2>
+        {/if}
+        <Criteria 
+          short_label={currentChapter.short_label} 
+          url={criteria.handle ? criteria.handle.substring(criteria.handle.indexOf('-') + 1) : null} 
+          chapterId={chapterId} 
+          chapterLink={currentStandard.url} 
+          id={criteria.id}
+          alt_id={criteria.alt_id}
+          handle={criteria.handle}
+          components={criteria.components}/>
+    {/each}
+  {:else if chapterId === "success_criteria_level_aa" && currentChapter.short_label === "AA"}
     {#each currentChapter.criteria as criteria, i (criteria.id)}
         {#if criteria.description }
           <h2 id={criteria.description}>{criteria.description}</h2>
