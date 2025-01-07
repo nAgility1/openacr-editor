@@ -108,7 +108,7 @@
   <ExpandCollapseAll />
 
   {#if chapterId === "success_criteria_level_a" && (currentChapter.short_label === "A" || currentChapter.short_label === "A-AA") }
-    {#each currentChapter.criteria as criteria, i (`${criteria.id}-${i}`)}
+  {#each currentChapter.criteria as criteria, i (criteria.id)}
     {#if criteria.description }
           <h2 id={criteria.description}>{criteria.description}</h2>
         {/if}
