@@ -15,7 +15,7 @@
 
   $: linkToImplementing = `${chapterLink}#${alt_id}`;
   $: disabled = ($evaluation['chapters'][chapterId]['disabled']) ? 'disabled' : '';
-  $: isAorAA = short_label === 'A' || short_label === 'AA' || short_label === 'AAA';
+  $: isAorAAorAAA = short_label === 'A' || short_label === 'AA' || short_label === 'AAA' || short_label === 'A-AA';
 </script>
 
 <style>
@@ -33,7 +33,7 @@
 <div {id} class="criteria">
   <details>
     <summary>
-      <HeaderWithAnchor id="{id}" level=2 url="{url}">{#if isAorAA}WCAG SC {/if} {id}: {handle.substring(0, handle.indexOf('-'))}</HeaderWithAnchor>
+      <HeaderWithAnchor id="{id}" level=2 url="{url}">{#if isAorAAorAAA}WCAG SC {/if} {id}: {handle}</HeaderWithAnchor>
     </summary>
     {#if !disabled}
       <span class="observation__meta">
@@ -42,7 +42,7 @@
         </Link>
       </span>
     {/if}
-    <LinkToGuidance href={linkToImplementing}>Implementing {id}: {isAorAA ? handle.substring(0, handle.indexOf('-')) : handle}</LinkToGuidance>
+    <LinkToGuidance href={linkToImplementing}>Implementing {id}: {isAorAAorAAA ? handle: handle}</LinkToGuidance>
     {#if components}
       {#each components as c}
         <Component chapterId={chapterId} criteria={id} component={c} />

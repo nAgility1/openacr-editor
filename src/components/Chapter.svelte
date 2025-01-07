@@ -107,9 +107,9 @@
 
   <ExpandCollapseAll />
 
-  {#if chapterId === "success_criteria_level_a" && currentChapter.short_label === "A"}
-    {#each currentChapter.criteria as criteria, i (criteria.id)}
-        {#if criteria.description }
+  {#if chapterId === "success_criteria_level_a" && (currentChapter.short_label === "A" || currentChapter.short_label === "A-AA") }
+    {#each currentChapter.criteria as criteria, i (`${criteria.id}-${i}`)}
+    {#if criteria.description }
           <h2 id={criteria.description}>{criteria.description}</h2>
         {/if}
         <Criteria 
@@ -119,7 +119,7 @@
           chapterLink={currentStandard.url} 
           id={criteria.id}
           alt_id={criteria.alt_id}
-          handle={criteria.handle}
+          handle={criteria.handle ? criteria.handle.substring(0, criteria.handle.indexOf('-https')) : criteria.handle}
           components={criteria.components}/>
     {/each}
   {:else if chapterId === "success_criteria_level_aa" && currentChapter.short_label === "AA"}
