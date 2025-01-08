@@ -3,6 +3,7 @@
   import HelpText from "../components/HelpText.svelte";
   import HeaderWithAnchor from "./HeaderWithAnchor.svelte";
   import { getCatalog } from "../utils/getCatalogs.js";
+  import { text } from "svelte/internal";
 
   export let chapterId;
   export let criteria;
@@ -19,6 +20,9 @@
   $: currentEvaluationComponentIndex = (currentEvaluationCriteria) ? currentEvaluationCriteria.components.findIndex( ({ name }) => name === component) : null;
   $: notesCharCount = ($evaluation['chapters'][chapterId]['criteria'][currentEvaluationCriteriaIndex]['components'][currentEvaluationComponentIndex]['adherence']['notes']) ? $evaluation['chapters'][chapterId]['criteria'][currentEvaluationCriteriaIndex]['components'][currentEvaluationComponentIndex]['adherence']['notes'].length : 0;
   $: disabled = ($evaluation['chapters'][chapterId]['disabled']) ? 'disabled' : '';
+  $: urltoDisplay = currentComponent['description'] && currentComponent['description'].includes('https') ? currentComponent['description'] : null;
+  $: testInstructions = currentComponent['description'] && !currentComponent['description'].includes('https') ? currentComponent['description'] : null;
+  console.log(testInstructions);
 
   function showNotesMessage(e) {
     const messageBox = document.getElementById(`evaluation-${criteria}-${component}-notes-message`);
@@ -60,7 +64,7 @@
 </style>
 
 {#if currentComponent.label }
-  <HeaderWithAnchor id="{criteria}-{component}" level=3 url={currentComponent.description || null}>{currentComponent.label}</HeaderWithAnchor>
+  <HeaderWithAnchor id="{criteria}-{component}" level=3 url={urltoDisplay}>{currentComponent.label}</HeaderWithAnchor>
 {:else}
   <br/><br/>
 {/if}
@@ -97,12 +101,18 @@
         id="evaluation-{criteria}-{component}-notes"
         on:change={() => evaluation.updateCache($evaluation)}
         on:keyup={showNotesMessage}
-        aria-describedby="evaluation-{criteria}-{component}-notes-message" {disabled}/>
+        aria-describedby="evaluation-{criteria}-{component}-notes-message" {disabled}></textarea>
       <HelpText type="components" field="notes" />
     </div>
+
+    {#if currentComponent.description }
+      <div class="testinstructions">
+        <span class="test-instructions">{(currentComponent.description && currentComponent.description.includes('Test Instructions')) ? currentComponent.description : null}</span>
+      </div>
+    {/if}
   {:else}
-    <p>Could not find component '{component}' for critera '{criteria}' in '{chapterId}'.</p>
+    <p>Could not find component '{component}' for criteria '{criteria}' in '{chapterId}'.</p>
   {/if}
 {:else}
-  <p>Could not find component '{component}' for critera '{criteria}' in '{chapterId}'.</p>
+  <p>Could not find component '{component}' for criteria '{criteria}' in '{chapterId}'.</p>
 {/if}
