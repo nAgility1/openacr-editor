@@ -3,7 +3,7 @@
   import HelpText from "../components/HelpText.svelte";
   import HeaderWithAnchor from "./HeaderWithAnchor.svelte";
   import { getCatalog } from "../utils/getCatalogs.js";
-  import { text } from "svelte/internal";
+  import sanitizeHtml from "sanitize-html";
 
   export let chapterId;
   export let criteria;
@@ -33,6 +33,14 @@
     } else {
       messageBox.innerHTML = "";
     }
+  }
+
+  function showTestInstructions(description) {
+
+    if (description) {
+      description = description.replace(/1./g, `<br/>1.`);
+    }
+    return sanitizeHtml(`<span>${description}</span>`);
   }
 </script>
 
@@ -105,9 +113,9 @@
       <HelpText type="components" field="notes" />
     </div>
 
-    {#if currentComponent.description }
+    {#if currentComponent.description && currentComponent.description.includes('Test Instructions')}
       <div class="testinstructions">
-        <span class="test-instructions">{(currentComponent.description && currentComponent.description.includes('Test Instructions')) ? currentComponent.description : null}</span>
+        <span class="test-instructions">{@html showTestInstructions(currentComponent.description)}</span>
       </div>
     {/if}
   {:else}
