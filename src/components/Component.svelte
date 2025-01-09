@@ -38,7 +38,7 @@
   function showTestInstructions(description) {
 
     if (description) {
-      description = description.replace(/1./g, `<br/>1.`);
+      description = description.replace(/1./g, `<br/>1.`).replace(/2./g, `<br/>2.`).replace(/3./g, `<br/>3.`);
     }
     return sanitizeHtml(`<span>${description}</span>`);
   }

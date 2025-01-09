@@ -7,7 +7,7 @@ standards:
     url: https://www.w3.org/TR/WCAG21/
     chapters:
       - success_criteria_level_a
-      - success_criteria_level_aa
+      # - success_criteria_level_aa
       - success_criteria_level_aaa
   - id: "508"
     label: >-
@@ -503,6 +503,16 @@ chapters:
         alt_id: motion-actuation
         components:
           - motion
+  # - id: success_criteria_level_aa
+  #   label: "Table 2: Success Criteria, Level AA"
+  #   short_label: AA
+  #   order: 2
+  #   criteria:
+  #     - id: 0.0.0
+  #       handle: Captions (Live)
+  #       alt_id: captions-live
+  #       components:
+  #         - web
   - id: success_criteria_level_aaa
     label: "Table 3: Success Criteria, Level AAA"
     short_label: AAA
@@ -1252,7 +1262,14 @@ components:
     alt-id: 1.C
     label: Key Shortcuts
     description: >-
-      Test Instructions 1. Test each letter, punctuation, number, and symbol character to ensure there are no keyboard shortcut customizations that utilize only one key. 
+      Test Instructions 1. Test each letter, punctuation, number, and symbol
+      character to ensure there are no keyboard shortcut customizations that
+      utilize only one key. A. If a single key shortcut is found, confirm one of
+      the following is true&#58;  —Turn off A mechanism is available to turn the
+      shortcut off; —Remap&#58; A mechanism is available to remap the shortcut
+      to include one or more non-printable keyboard keys (e.g., Ctrl, Alt);
+      —Active only on focus&#58; The keyboard shortcut for a user interface
+      component is only active when that component has focus.
   - id: focus-visible
     alt_id: 2.A
     label: Focus Visible
