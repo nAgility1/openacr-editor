@@ -22,7 +22,6 @@
   $: disabled = ($evaluation['chapters'][chapterId]['disabled']) ? 'disabled' : '';
   $: urltoDisplay = currentComponent['description'] && currentComponent['description'].includes('https') ? currentComponent['description'] : null;
   $: testInstructions = currentComponent['description'] && !currentComponent['description'].includes('https') ? currentComponent['description'] : null;
-  console.log(testInstructions);
 
   function showNotesMessage(e) {
     const messageBox = document.getElementById(`evaluation-${criteria}-${component}-notes-message`);
@@ -36,9 +35,10 @@
   }
 
   function showTestInstructions(description) {
-
     if (description) {
-      description = description.replace(/1./g, `<br/>1.`).replace(/2./g, `<br/>2.`).replace(/3./g, `<br/>3.`);
+      description = description.replace(/\(ol\)/g, `<ol>`).replace(/\(eol\)/g, `</ol>`);
+      description = description.replace(/\(ul\)/g, `<ul>`).replace(/\(eul\)/g, `</ul>`);
+      description = description.replace(/\(li\)/g, `<li>`).replace(/\(eli\)/g, `</li>`);
     }
     return sanitizeHtml(`<span>${description}</span>`);
   }
