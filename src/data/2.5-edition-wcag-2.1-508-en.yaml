@@ -7,7 +7,7 @@ standards:
     url: https://www.w3.org/TR/WCAG21/
     chapters:
       - success_criteria_level_a
-      # - success_criteria_level_aa
+      - success_criteria_level_aa
       - success_criteria_level_aaa
   - id: "508"
     label: >-
@@ -503,16 +503,16 @@ chapters:
         alt_id: motion-actuation
         components:
           - motion
-  # - id: success_criteria_level_aa
-  #   label: "Table 2: Success Criteria, Level AA"
-  #   short_label: AA
-  #   order: 2
-  #   criteria:
-  #     - id: 0.0.0
-  #       handle: Captions (Live)
-  #       alt_id: captions-live
-  #       components:
-  #         - web
+  - id: success_criteria_level_aa
+    label: "Table 2: Success Criteria, Level AA"
+    short_label: AA
+    order: 2
+    criteria:
+      - id: 0.0.0
+        handle: Captions (Live)
+        alt_id: captions-live
+        components:
+          - web
   - id: success_criteria_level_aaa
     label: "Table 3: Success Criteria, Level AAA"
     short_label: AAA
@@ -1261,15 +1261,7 @@ components:
   - id: key-shortcuts
     alt-id: 1.C
     label: Key Shortcuts
-    description: >-
-      Test Instructions (ol)(li)Test each letter, punctuation, number, and symbol
-      character to ensure there are no keyboard shortcut customizations that
-      utilize only one key.(eli) (li)If a single key shortcut is found, confirm one of
-      the following is true&#58;(eli)  (ul)(li)Turn off&#58; A mechanism is available to turn the
-      shortcut off. (eli)(li)Remap&#58; A mechanism is available to remap the shortcut
-      to include one or more non-printable keyboard keys (e.g., Ctrl, Alt).
-      (eli)(li)Active only on focus&#58; The keyboard shortcut for a user interface
-      component is only active when that component has focus.	(eli)(eul)(eol)
+    description: "Test Instructions (ol)(li)Test each letter, punctuation, number, and symbol character to ensure there are no keyboard shortcut customizations that utilize only one key.(eli) (li)If a single key shortcut is found, confirm one of the following is true&#58;(eli)  (ul)(li)Turn off&#58; A mechanism is available to turn the shortcut off. (eli)(li)Remap&#58; A mechanism is available to remap the shortcut to include one or more non-printable keyboard keys (e.g., Ctrl, Alt). (eli)(li)Active only on focus&#58; The keyboard shortcut for a user interface component is only active when that component has focus.\t(eli)(eul)(eol)"
   - id: focus-visible
     alt_id: 2.A
     label: Focus Visible
@@ -1289,12 +1281,20 @@ components:
     alt_id: 2.D
     label: Content on Hover or Focus
     description: >-
-      Test Instructions (ol)(li)Use the keyboard to move focus to and navigate through each interactive element that reveals additional content while remaining on the same page (additional content includes drop-down lists, tooltips, etc.).(eli)
-      (li)Check that when focus reveals content the following is true&#58;(eli)  (ul)(li)Turn off&#58; A mechanism is available to turn the
-      shortcut off. (eli)(li)Dismissible&#58; 
-      A mechanism is available to dismiss the additional content without moving pointer hover or keyboard focus, unless the additional content communicates an input error or does not obscure or replace other content.(eli)
-      (li)Hoverable&#58; If pointer hover can trigger the additional content, then the pointer can be moved over the additional content without the additional content disappearing.(eli)
-      (li)Persistent&#58; The additional content remains visible until the hover or focus trigger is removed, the user dismisses it, or its information is no longer valid.(eli)(eul)(eol)
+      Test Instructions (ol)(li)Use the keyboard to move focus to and navigate
+      through each interactive element that reveals additional content while
+      remaining on the same page (additional content includes drop-down lists,
+      tooltips, etc.).(eli) (li)Check that when focus reveals content the
+      following is true&#58;(eli)  (ul)(li)Turn off&#58; A mechanism is
+      available to turn the shortcut off. (eli)(li)Dismissible&#58; A mechanism
+      is available to dismiss the additional content without moving pointer
+      hover or keyboard focus, unless the additional content communicates an
+      input error or does not obscure or replace other content.(eli)
+      (li)Hoverable&#58; If pointer hover can trigger the additional content,
+      then the pointer can be moved over the additional content without the
+      additional content disappearing.(eli) (li)Persistent&#58; The additional
+      content remains visible until the hover or focus trigger is removed, the
+      user dismisses it, or its information is no longer valid.(eli)(eul)(eol)
   - id: non-interference
     label: Non Interference
     alt_id: 3.A
