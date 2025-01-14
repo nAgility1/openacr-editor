@@ -2,7 +2,7 @@
 
 const chapters = [
   "success_criteria_level_a",
-  "success_criteria_level_aa",
+  // "success_criteria_level_aa",
   "success_criteria_level_aaa",
   "functional_performance_criteria",
   "hardware",

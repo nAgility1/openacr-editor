@@ -60,10 +60,12 @@
     <NavItem to="/">Overview</NavItem>
     <NavItem to="/about">About</NavItem>
     {#each catalog.chapters as chapter}
+      {#if chapter.id != "success_criteria_level_aa"}
       <NavItem to="chapter/{chapter.id}">
         {chapter.short_label}
         <span class="visuallyhidden">: {chapter.label}</span>
       </NavItem>
+      {/if}
     {/each}
     <NavItem to="/report">Report</NavItem>
     <NavItem to="/glossary">Glossary</NavItem>

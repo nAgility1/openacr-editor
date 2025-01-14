@@ -16,8 +16,8 @@
       update to show only the sections you need to fill out. If you need to
       change this later, change your response product information questions.
     {:else if chapterId === "success_criteria_level_a"}
-      Provide information about Level A issues with your website or web
-      application. Currently OpenACR only supports WCAG 2.0. The default is
+      Provide information about Level A accessibility conformance with your website 
+      or web application. The default is
       web-based, and there are optional fields for <a
         href="#1.1.1-electronic-docs-editor"
         on:click={() => openFirstAccordion()}>Documentation</a
@@ -29,7 +29,7 @@
       <a
         href="#1.1.1-authoring-tool-editor"
         on:click={() => openFirstAccordion()}>Authoring</a
-      >. Fill out as appropriate.
+      >. Complete fields as appropriate.
     {:else if chapterId === "success_criteria_level_aa"}
       Provide information about how your website or web application fails to
       meet Level AA requirements. Currently OpenACR only supports WCAG 2.0. The
@@ -47,11 +47,9 @@
       >. Fill out as appropriate.
     {:else if chapterId === "success_criteria_level_aaa"}
       This section is optional. Consider providing information about Level AAA
-      support in your website or web application. WCAG Level AAA reflect
+      conformance in your website or web application. WCAG Level AAA reflect
       accessibility features that exceed the minimum requirements of Section
-      508. It is useful to describe how your product or service exceeds Level AA
-      requirements. Additionally, some end-users and some projects may need
-      specific AAA requirements to be meet.
+      508. Additionally, some projects may have specific AAA requirements.
     {:else if chapterId === "functional_performance_criteria"}
       Describe barriers here if they are not covered in other sections.
       Highlight the impact on different types of disabilities. Optionally, this

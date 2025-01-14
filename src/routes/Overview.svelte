@@ -65,7 +65,7 @@
   <p>
     OpenACR is a digital native Accessibility Conformance Report (ACR). The initial development is based on Section 508 requirements.
     There are many advantages in moving to a machine-readable format, but one of the biggest is that it allows accessibility claims of
-    digital products and services to be compared. Moving to a highligh structured, self-validated document format will make this much simpler.
+    digital products and services to be compared. Moving to a highly structured, self-validated document format will make this much simpler.
   </p>
   <p>
     Many organizations face challenges in delivering accessible services to people with disabilities. Software vendors currently submit

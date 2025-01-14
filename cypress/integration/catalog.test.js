@@ -3,7 +3,7 @@
 const catalogs = ["2.5-edition-wcag-2.1-508-en", "2.5-edition-wcag-2.2-508-en"];
 const chapters = [
   "success_criteria_level_a",
-  "success_criteria_level_aa",
+  // "success_criteria_level_aa",
   "success_criteria_level_aaa",
 ];
 const wcag22Criteria = "2.2.5";
@@ -86,7 +86,7 @@ describe("Catalogs", () => {
     cy.on("window:confirm", cy.stub().as("confirmation"));
 
     // Switch to WCAG 2.2 catalog.
-    cy.get("input[value='2.5-edition-wcag-2.2-en']").check();
+    cy.get("input[value='2.5-edition-wcag-2.2-508-en']").check();
 
     cy.get("button").contains("Switch Catalogs").click();
 
@@ -102,7 +102,7 @@ describe("Catalogs", () => {
     cy.visit("/about");
 
     // Switch to WCAG 2.2 catalog.
-    cy.get("input[value='2.5-edition-wcag-2.2-en']").check();
+    cy.get("input[value='2.5-edition-wcag-2.2-508-en']").check();
 
     cy.get("button").contains("Reset").click();
 
@@ -116,7 +116,7 @@ describe("Catalogs", () => {
     cy.on("window:confirm", () => false);
 
     // Switch to WCAG 2.2 catalog.
-    cy.get("input[value='2.5-edition-wcag-2.2-en']").check();
+    cy.get("input[value='2.5-edition-wcag-2.2-508-en']").check();
 
     cy.get("button").contains("Switch Catalogs").click();
 

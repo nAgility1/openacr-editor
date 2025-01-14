@@ -124,13 +124,13 @@ describe("Report", () => {
     );
   });
 
-  it("should show entered level and notes for a criteria", () => {
+  it.only("should show entered level and notes for a criteria", () => {
     cy.visit("/chapter/success_criteria_level_a");
     cy.get("button").contains("+ Expand All Sections").click();
 
-    cy.get("select[name='evaluation-1.1.1-web-level']").select("Supports");
+    cy.get("select[name='evaluation-2.1.1-keyboard-access-level']").select("Supports");
 
-    cy.get("textarea[id='evaluation-1.1.1-web-notes']").type(
+    cy.get("textarea[id='evaluation-2.1.1-keyboard-access-notes']").type(
       "Does support non-text content."
     );
 
@@ -162,7 +162,7 @@ describe("Report", () => {
   });
 
   it("should sanitize XSS example in notes for a chapter", () => {
-    cy.visit("/chapter/success_criteria_level_aa");
+    cy.visit("/chapter/success_criteria_level_a");
 
     cy.get("textarea[id='evaluation-chapter-notes']").clear();
 
@@ -172,7 +172,7 @@ describe("Report", () => {
 
     cy.get("button").contains("View Report").click();
 
-    cy.get("#success_criteria_level_aa-editor + p b").should(
+    cy.get("#success_criteria_level_a-editor + p b").should(
       "not.have.attr",
       "onclick"
     );

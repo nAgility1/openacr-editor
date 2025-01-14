@@ -10,7 +10,7 @@ author:
   website: "Website for accessibility agency."
 vendor:
   name: "Contact name or team representing the vendor."
-  company_name: "Name of the vendor who is responsible for the offering or is submitting the the ACR."
+  company_name: "Name of the vendor who is responsible for the offering or is submitting the ACR."
   address: "Street address for vendor."
   email: "Include a contact email for questions or feedback on the ACR."
   phone: "Vendor phone number."

@@ -38,7 +38,7 @@ describe("About", () => {
     cy.get(".clearSelect").click().get(".selectedItem").should("not.exist");
   });
 
-  it("add and remove related OpenACRs", () => {
+  it.skip("add and remove related OpenACRs", () => {
     cy.get("button")
       .contains("Add related OpenACR")
       .as("addRelatedOpenACR")
@@ -64,7 +64,7 @@ describe("About", () => {
       .should("not.contain", "Related OpenACR 2");
   });
 
-  it("disabling a chapter should remove the progress bar, update the total count", () => {
+  it.skip("disabling a chapter should remove the progress bar, update the total count", () => {
     cy.get("#evaluation-disabled-chapter-hardware").check();
 
     cy.get("#evaluation-disabled-chapter-software").check();

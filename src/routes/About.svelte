@@ -131,7 +131,7 @@
 
 <details open>
   <summary>
-    <HeaderWithAnchor id="select-catalog" level=2>Select report type and catalog</HeaderWithAnchor>
+    <HeaderWithAnchor id="select-catalog" level=2>Catalog Type</HeaderWithAnchor>
   </summary>
   <p>{helpText["catalog"]["intro"]}</p>
   {#each catalogChoices as catalogChoice}

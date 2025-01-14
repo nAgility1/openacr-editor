@@ -122,7 +122,7 @@
           handle={criteria.handle ? criteria.handle.substring(0, criteria.handle.indexOf('-https')) : criteria.handle}
           components={criteria.components}/>
     {/each}
-  {:else if chapterId === "success_criteria_level_aa" && currentChapter.short_label === "AA"}
+  <!-- {:else if chapterId === "success_criteria_level_aa" && currentChapter.short_label === "AA"}
     {#each currentChapter.criteria as criteria, i (criteria.id)}
         {#if criteria.description }
           <h2 id={criteria.description}>{criteria.description}</h2>
@@ -136,7 +136,7 @@
           alt_id={criteria.alt_id}
           handle={criteria.handle}
           components={criteria.components}/>
-    {/each}
+    {/each} -->
   {:else}
     {#each currentChapter.criteria as criteria, i (criteria.id)}
       <Criteria short_label={currentChapter.short_label} url={i.handle ? criteria.substring(criteria.indexOf('-') + 1): null} chapterId={chapterId} chapterLink={currentStandard.url} {...criteria}/>

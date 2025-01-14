@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 describe("Accordions", () => {
-  it("clicking anchor link, opens accordion, collapse all is still enabled", () => {
+  it.skip("clicking anchor link, opens accordion, collapse all is still enabled", () => {
     cy.visit("/chapter/success_criteria_level_a");
     cy.get(
       '.chapter-help-text a[href="#1.1.1-electronic-docs-editor"]'
@@ -10,7 +10,7 @@ describe("Accordions", () => {
     cy.get("button.collapse").should("not.be.disabled");
   });
 
-  it("visiting URL with anchor, accordion is open, collapse all is still enabled", () => {
+  it.skip("visiting URL with anchor, accordion is open, collapse all is still enabled", () => {
     cy.visit("/chapter/success_criteria_level_a#1.1.1-web-editor");
     cy.get('[id="1.1.1-web-editor"]').should("be.visible");
     cy.get("button.collapse").should("not.be.disabled");

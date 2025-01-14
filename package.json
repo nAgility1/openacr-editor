@@ -53,6 +53,7 @@
     "dev": "cross-env NODE_ENV=development && npm run replace_vars && rollup -c -w",
     "start": "sirv public",
     "a11y-test": "pa11y-ci",
-    "test": "cypress run --browser chrome --headless"
+    "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider cypress run --browser chrome --headless"
+
   }
 }
