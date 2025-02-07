@@ -29,7 +29,7 @@
 
 <p>
   This web editor helps evaluators build Accessibility Conformance Reports in the <a href="https://github.com/gsa/openacr" target="_blank">OpenACR format <span class="visuallyhidden">(opens in a new window or tab)</span></a>.
-  It is designed to help accessibility subject matter experts create machine-readable OpenACR documents. Authors will be guided in creating an
+  It is designed to assist accessibility subject matter experts create machine-readable OpenACR documents. Authors will be guided in creating an
   accessible report for the digital product or service that they are documenting. Conformance for each requirement can be documented as required
   to generate a Section 508 report.
 </p>
@@ -38,8 +38,8 @@
 
 <ul>
   <li>
-    This editor saves the information you enter locally in your browser (not on our servers). To save or share your OpenACR report, you will
-    need to save it to your computer. You will need the YAML file to submit your OpenACR and to edit this report in the future.
+    This editor saves the information you enter locally in your browser (not on our servers). To save or share your OpenACR report, you must
+    save it to your computer. You will need the YAML file to submit your OpenACR and to edit this report in the future.
   </li>
   <li>
     As you use the editor, the
@@ -48,7 +48,7 @@
   </li>
   <li>
     You can export your report as YAML (structured data) but also as HTML (web page). Note: You will not be able
-    to edit the report the future without the YAML file.
+    to edit the report in the future without the YAML file.
   </li>
   <li>
     You can add limited formatting to your report with <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">Markdown <span class="visuallyhidden">(opens in a new window or tab)</span></a>. This allows you to add

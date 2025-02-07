@@ -48,7 +48,7 @@
     <li>Right click anywhere on this page and select Save As.</li>
     <li>Choose a location where you want to save your HTML file.</li>
     <li>Share the HTML file or folder and the YAML file you previously downloaded with your collaborators.</li>
-    <li>Let your collaborators know that they can view the HTML version of the file and can make edits by going to the OpenACR editor and uploading the YAML file. When they have completed their edits, they must to send you the YAML file. The HTML file is optional.</li>
+    <li>Inform your collaborators that they can view the HTML version of the file and can make edits by going to the OpenACR editor and uploading the YAML file. When they have completed their edits, they must send you the YAML file. The HTML file is optional.</li>
   </ol>
 </details>
 

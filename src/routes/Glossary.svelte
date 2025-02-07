@@ -93,7 +93,7 @@
   <dd>With a little training, most people can do basic testing using just a keyboard (with no mouse). With additional training, users can
   get a basic sense of how to use other assistive technology. Effective screen reader testing takes considerable experience.</dd>
   <DTWithAnchor id="medical-model-of-disability">Medical model of disability</DTWithAnchor>
-  <dd>An understanding of disabilityy based on the biomedical perception of disability. This model links a disability diagnosis
+  <dd>An understanding of disability based on the biomedical perception of disability. This model links a disability diagnosis
     to an individual's physical body. The model supposes that this disability may reduce the individual's quality of life and
     the aim is, with medical intervention, this disability will be diminished or corrected</dd>
   <DTWithAnchor id="open-source-software-oss">Open Source Software (OSS)</DTWithAnchor>
