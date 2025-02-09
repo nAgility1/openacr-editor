@@ -16,8 +16,8 @@
   $: linkToImplementing = `${chapterLink}#${alt_id}`;
   $: disabled = ($evaluation['chapters'][chapterId]['disabled']) ? 'disabled' : '';
   $: isAorAAorAAA = short_label === 'A' || short_label === 'AA' || short_label === 'AAA' || short_label === 'A-AA';
-  $: idtoDisplay = id ? (id.includes('-') ? id.split('-')[0] : id) : null;
-  $: toDisplay = idtoDisplay && idtoDisplay != '0.0.0' ? true : false;
+  $: idtoDisplay = id ? (String(id).includes('-') ? String(id).split('-')[0] : id) : null;
+  $: toDisplay = idtoDisplay && idtoDisplay != '0.0.0'|| '503.4.0' || '503.4.2' || '503.4.3' ? true : false;
 </script>
 
 <style>

@@ -18,6 +18,9 @@
   $: currentEvaluationComponent = (currentEvaluationCriteria) ? currentEvaluationCriteria.components.find( ({ name }) => name === component) : null;
   $: currentEvaluationCriteriaIndex = ($evaluation['chapters'] && $evaluation['chapters'][chapterId]['criteria']) ? $evaluation['chapters'][chapterId]['criteria'].findIndex( ({ num }) => num === criteria) : null;
   $: currentEvaluationComponentIndex = (currentEvaluationCriteria) ? currentEvaluationCriteria.components.findIndex( ({ name }) => name === component) : null;
+  console.log('chapterId: ', chapterId);
+  console.log('criteria: ', criteria);
+  console.log('currentEvaluationCriteriaIndex: ', currentEvaluationCriteriaIndex);
   $: notesCharCount = ($evaluation['chapters'][chapterId]['criteria'][currentEvaluationCriteriaIndex]['components'][currentEvaluationComponentIndex]['adherence']['notes']) ? $evaluation['chapters'][chapterId]['criteria'][currentEvaluationCriteriaIndex]['components'][currentEvaluationComponentIndex]['adherence']['notes'].length : 0;
   $: disabled = ($evaluation['chapters'][chapterId]['disabled']) ? 'disabled' : '';
   $: urltoDisplay = currentComponent['description'] && currentComponent['description'].includes('https') ? currentComponent['description'] : null;

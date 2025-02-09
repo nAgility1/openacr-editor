@@ -1,6 +1,6 @@
 import { evaluation } from "../stores/evaluation.js";
 import { validate } from "../utils/validate.js";
-import { getCatalog } from "./getCatalogs.js";
+import { getCatalog, wcag20508catalogName } from "./getCatalogs.js";
 import compareVersions from "compare-versions";
 
 export function updateEvaluation(catalogName, converted) {
@@ -97,10 +97,10 @@ export function initializeMissingChapters(catalogName, converted) {
         });
       }
     }
-    if (
-      chapter.id === "success_criteria_level_a" ||
+    if ((catalogName === wcag20508catalogName) && 
+      (chapter.id === "success_criteria_level_a" ||
       chapter.id === "success_criteria_level_aa" ||
-      chapter.id === "success_criteria_level_aaa"
+      chapter.id === "success_criteria_level_aaa")
     ) {
       converted["chapters"][chapter.id].criteria.sort(sortCriteria);
     }
@@ -113,6 +113,7 @@ function sortCriteria(firstCriteria, secondCriteria) {
 }
 
 function removeCriteria(chapterId, criteria, converted) {
+  console.log("removeCriteria", chapterId, criteria, converted);
   let criteriaIndex =
     converted["chapters"] && converted["chapters"][chapterId]["criteria"]
       ? converted["chapters"][chapterId]["criteria"].findIndex(

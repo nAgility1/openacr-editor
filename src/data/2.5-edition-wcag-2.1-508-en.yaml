@@ -341,7 +341,7 @@ chapters:
           - video-only-transcript
           - audio-media-alternative
           - video-media-alternative
-      - id: Section 508 503.4
+      - id: 503.4.0
         handle: >-
           User Controls for Captions and Audio
           Description-https://www.federalregister.gov/d/2017-00395/p-630
@@ -349,12 +349,12 @@ chapters:
         description: 17. Synchronized Media
         components:
           - media-player-ccad-controls
-      - id: Section 508 503.4.1
+      - id: 503.4.1
         handle: Caption Controls-https://www.federalregister.gov/d/2017-00395/p-631
         alt_id: caption-controls
         components:
           - media-player-cc-level
-      - id: Section 508 503.4.2
+      - id: 503.4.2
         handle: >-
           Audio Description
           Controls-https://www.federalregister.gov/d/2017-00395/p-632
