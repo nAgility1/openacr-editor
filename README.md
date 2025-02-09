@@ -28,7 +28,7 @@ Navigate to [localhost:10001](http://localhost:10001). You should see your app r
 
 ## Deployment
 
-To create an optimised version of the app:
+To create an optimised version of the app, run with the appropriate NODE_ENV as above followed by:
 
 ```bash
 npm run build
