@@ -21,14 +21,14 @@
   console.log('chapterId: ', chapterId);
   console.log('criteria: ', criteria);
   console.log('currentEvaluationCriteriaIndex: ', currentEvaluationCriteriaIndex);
-  $: notesCharCount = ($evaluation['chapters'][chapterId]['criteria'][currentEvaluationCriteriaIndex]['components'][currentEvaluationComponentIndex]['adherence']['notes']) ? $evaluation['chapters'][chapterId]['criteria'][currentEvaluationCriteriaIndex]['components'][currentEvaluationComponentIndex]['adherence']['notes'].length : 0;
+  $: notesCharCount = (currentEvaluationCriteriaIndex && $evaluation['chapters'][chapterId]['criteria'][currentEvaluationCriteriaIndex]['components'][currentEvaluationComponentIndex]['adherence']['notes']) ? $evaluation['chapters'][chapterId]['criteria'][currentEvaluationCriteriaIndex]['components'][currentEvaluationComponentIndex]['adherence']['notes'].length : 0;
   $: disabled = ($evaluation['chapters'][chapterId]['disabled']) ? 'disabled' : '';
   $: urltoDisplay = currentComponent['description'] && currentComponent['description'].includes('https') ? currentComponent['description'] : null;
   $: testInstructions = currentComponent['description'] && !currentComponent['description'].includes('https') ? currentComponent['description'] : null;
 
   function showNotesMessage(e) {
     const messageBox = document.getElementById(`evaluation-${criteria}-${component}-notes-message`);
-    if (notesCharCount > 50) {
+    if (notesCharCount && (notesCharCount > 50)) {
       messageBox.innerHTML = "<span class='notes-good'>Good&nbsp;</span>";
     } else if (notesCharCount > 1) {
       messageBox.innerHTML = "<span class='notes-need-more'>Longer description may be helpful&nbsp;</span>";

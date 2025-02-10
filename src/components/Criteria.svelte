@@ -16,8 +16,12 @@
   $: linkToImplementing = `${chapterLink}#${alt_id}`;
   $: disabled = ($evaluation['chapters'][chapterId]['disabled']) ? 'disabled' : '';
   $: isAorAAorAAA = short_label === 'A' || short_label === 'AA' || short_label === 'AAA' || short_label === 'A-AA';
-  $: idtoDisplay = id ? (String(id).includes('-') ? String(id).split('-')[0] : id) : null;
-  $: toDisplay = idtoDisplay && idtoDisplay != '0.0.0'|| '503.4.0' || '503.4.1' || '503.4.2' ? true : false;
+  // parse out the extra hyphen letter if it was added for preventing duplicates
+  $: idNum = id ? (String(id).includes('-') ? String(id).split('-')[0] : id) : '';
+  $: section508id = String(id).includes('503') ? (String(id).includes('503.4.0') ? '503.4' : String(id)) : '';
+  $: toDisplay = (idNum && idNum != ('0.0.0' || '5.0.0')) ? true : false;
+  $: conformancetext = (idNum == '5.0.0') ? 'WCAG Conformance Requirement 5' : '';
+  $: idtoDisplay = section508id ? ('Section 508 ' + section508id) : (conformancetext ? conformancetext : idNum);
 </script>
 
 <style>
@@ -35,7 +39,7 @@
 <div {id} class="criteria">
   <details>
     <summary>
-      <HeaderWithAnchor id="{id}" level=2 url="{url}">{#if isAorAAorAAA && toDisplay}WCAG SC {/if} {toDisplay ? idtoDisplay + ':': 'WCAG'} {handle}</HeaderWithAnchor>
+      <HeaderWithAnchor id="{id}" level=2 url="{url}">{#if isAorAAorAAA && toDisplay && !section508id && !conformancetext}WCAG SC {/if} {toDisplay ? idtoDisplay + ':': 'WCAG'} {handle}</HeaderWithAnchor>
     </summary>
     {#if !disabled}
       <span class="observation__meta">

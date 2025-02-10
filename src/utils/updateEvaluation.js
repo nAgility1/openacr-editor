@@ -28,6 +28,7 @@ export function updateEvaluation(catalogName, converted) {
     removeCriteria("success_criteria_level_a", "1.1.1-a", converted);
     removeCriteria("success_criteria_level_a", "1.1.1-b", converted);
     removeCriteria("success_criteria_level_a", "1.1.1-c", converted);
+    removeCriteria("success_criteria_level_a", "1.1.1-c", converted);
  
     // AAA
     removeCriteria("success_criteria_level_aaa", "1.3.6", converted);
@@ -42,12 +43,12 @@ export function updateEvaluation(catalogName, converted) {
     evaluation.update((evaluation) => converted);
     evaluation.updateCache(converted, true);
     alert("OpenACR passed validation when switching catalog.");
-  } else {
-    alert(
-      "OpenACR failed validation when trying to switch catalog. Message: " +
-        valid.message
-    );
-  }
+  } // else {
+  //   alert(
+  //     "OpenACR failed validation when trying to switch catalog. Message: " +
+  //       valid.message
+  //   );
+  // }
 }
 
 export function initializeMissingChapters(catalogName, converted) {
