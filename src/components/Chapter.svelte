@@ -47,11 +47,11 @@
   // **** Add the following debug to check duplicate IDs in yaml
   $: currentChapter = chapters.find( ({ id }) => id === chapterId);
   $: {
-    console.log('Criteria IDs:', currentChapter.criteria.map(c => c.id));
+    //console.log('Criteria IDs:', currentChapter.criteria.map(c => c.id));
     const duplicateIds = currentChapter.criteria
       .map(c => c.id)
       .filter((id, index, array) => array.indexOf(id) !== index);
-    console.log('Duplicate IDs:', duplicateIds);
+    //console.log('Duplicate IDs:', duplicateIds);
   }
   // **** End the following debug to check duplicate IDs in yaml
   $: currentChapterKey = chapters.findIndex( ({ id }) => id === chapterId);

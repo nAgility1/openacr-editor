@@ -48,7 +48,7 @@
         </Link>
       </span>
     {/if}
-    <LinkToGuidance href={linkToImplementing}>Implementing {id}: {isAorAAorAAA ? handle: handle}</LinkToGuidance>
+    <LinkToGuidance href={linkToImplementing}>Implementing {id}: {handle}</LinkToGuidance>
     {#if components}
       {#each components as c}
         <Component chapterId={chapterId} criteria={id} component={c} />

@@ -121,7 +121,7 @@ function sortCriteria(firstCriteria, secondCriteria) {
 }
 
 function removeCriteria(chapterId, criteria, converted) {
-  console.log("removeCriteria", chapterId, criteria, converted);
+  //console.log("removeCriteria", chapterId, criteria, converted);
   let criteriaIndex =
     converted["chapters"] && converted["chapters"][chapterId]["criteria"]
       ? converted["chapters"][chapterId]["criteria"].findIndex(
