@@ -14,14 +14,21 @@ export function updateEvaluation(catalogName, converted) {
     removeCriteria("success_criteria_level_a", "2.5.2", converted);
     removeCriteria("success_criteria_level_a", "2.5.3", converted);
     removeCriteria("success_criteria_level_a", "2.5.4", converted);
-    // AA
-    removeCriteria("success_criteria_level_aa", "1.3.4", converted);
-    removeCriteria("success_criteria_level_aa", "1.3.5", converted);
-    removeCriteria("success_criteria_level_aa", "1.4.10", converted);
-    removeCriteria("success_criteria_level_aa", "1.4.11", converted);
-    removeCriteria("success_criteria_level_aa", "1.4.12", converted);
-    removeCriteria("success_criteria_level_aa", "1.4.13", converted);
-    removeCriteria("success_criteria_level_aa", "4.1.3", converted);
+    // AA but located under A in same tab)
+    removeCriteria("success_criteria_level_a", "1.3.4", converted);
+    removeCriteria("success_criteria_level_a", "1.3.5", converted);
+    removeCriteria("success_criteria_level_a", "1.4.10", converted);
+    removeCriteria("success_criteria_level_a", "1.4.11", converted);
+    removeCriteria("success_criteria_level_a", "1.4.12", converted);
+    removeCriteria("success_criteria_level_a", "1.4.13", converted);
+    removeCriteria("success_criteria_level_a", "4.1.3", converted);
+
+    // new
+    removeCriteria("success_criteria_level_a", "0.0.0", converted);
+    removeCriteria("success_criteria_level_a", "1.1.1-a", converted);
+    removeCriteria("success_criteria_level_a", "1.1.1-b", converted);
+    removeCriteria("success_criteria_level_a", "1.1.1-c", converted);
+ 
     // AAA
     removeCriteria("success_criteria_level_aaa", "1.3.6", converted);
     removeCriteria("success_criteria_level_aaa", "2.2.6", converted);
