@@ -56,20 +56,18 @@
       detail elsewhere.
     {:else if chapterId === "hardware"}
       If the Information and Communications Technology (ICT) includes hardware,
-      please complete this section.
+      complete this section.
     {:else if chapterId === "software"}
-      If your software product is a web application or is rendered through a web
-      browser, do not fill out this section. Fill out <a
+    Do not complete this section if your software product is a web application or is rendered through a web browser. 
+    Instead, Fill out <a
         href="success_criteria_level_a"
         use:link>Tables 1, 2, and 3</a
-      >. Use this section if your software product is not web-based.
-      Desktop applications are a common example of software which is not
-      web-based. Software that uses internet communication but is not accessed via
-      a third-party web browser (e.g., Chrome, Edge, Safari), is not web-based
-      software.
+      >. Use this section if your software product is not web-based. Desktop applications are a common example of 
+      non-web-based software. Software that uses internet communication but is not accessed through a third-party 
+      web browser (e.g., Chrome, Edge, and Safari) is also considered non-web-based software.
     {:else if chapterId === "support_documentation_and_services"}
-      If the support documentation for your product is not web-based (e.g., MS
-      Word, OpenOffice or PDF files), complete this section.
+    Complete this section if the support documentation for your product is not web-based (e.g., MS Word, Open Office, 
+    or PDF files).
     {/if}
   </p>
 {/if}

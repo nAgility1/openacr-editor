@@ -29,108 +29,98 @@
   <DTWithAnchor id="accessibility">Accessibility</DTWithAnchor>
   <dd>The measure of a web page's usability by persons with one or more disabilities.</dd>
   <DTWithAnchor id="accessibility-conformance-report">Accessibility Conformance Report (ACR)</DTWithAnchor>
-  <dd>A description how the offering will address all of the accessibility requirements outlined in the solicitation and the
+  <dd>A description how the offering addresses all of the accessibility requirements outlined in the solicitation and the
     evaluation methods used to validate the findings.</dd>
   <DTWithAnchor id="accessibility-maturity-model">Accessibility Maturity Model</DTWithAnchor>
-  <dd>An assessment of an organization's understanding and capacity to address accessibility. This often includes ensuring that an
-  organization includes people with disability in staff (including in positions of responsibility).</dd>
+  <dd>An assessment of an organization's understanding and capacity to address accessibility. This often includes ensuring 
+    that the organization includes people with disabilities on staff, including in positions of responsibility.</dd>
   <DTWithAnchor id="accessibility-statement">Accessibility Statement</DTWithAnchor>
-  <dd>A written confirmation about an organization's concern and work on being more inclusive for people with disabilities.
-  This usually provides information about accessibility goals and efforts to achieve them. Often there are links to ACRs if the
-  organization sells products or services. </dd>
+  <dd>A written confirmation of an organization's commitment to being more inclusive for people with disabilities. This usually provides information 
+    about accessibility goals and efforts to achieve them. Often, links to ACRs are included if the organization sells products or services.</dd>
   <DTWithAnchor id="accommodations">Accommodations</DTWithAnchor>
   <dd>The modification of a product or service so that an individual can perform job functions efficiently and safely. This is often needed
     if a product fails to meet Section 508 requirements. Accommodations after the fact are always more expensive than building an accessible solution.</dd>
   <DTWithAnchor id="assistive-technologies">Assistive technologies</DTWithAnchor>
-  <dd>Technology designed so people with disabilities have greater functional capabilities with computer-based systems.
-    This could be software or hardware and often benefits a broader range of computer users.</dd>
+  <dd>Technology designed to provide people with disabilities greater functional capabilities with computer-based systems. This could include software 
+    or hardware and often benefits a broader range of users.</dd>
   <DTWithAnchor id="americans-with-disabilities-act-of-1990-ada">Americans with Disabilities Act of 1990 (ADA)</DTWithAnchor>
   <dd>A United States civil rights law that prohibits discrimination based on disability.</dd>
   <DTWithAnchor id="automated-testing">Automated Testing</DTWithAnchor>
-  <dd>Software can now test for many accessibility barriers. This is becoming increasingly important piece of developing and maintaining software.
-    No automated tools can check for all Section 508 requirements, and so automated testing is a necessary part of an effective
-    testing strategy but insufficient on its own.</dd>
+  <dd>Software tools that test for many accessibility barriers. While essential for developing and maintaining software, no automated tool can check 
+    for all Section 508 requirements. Automated testing is a necessary but insufficient part of an effective testing strategy.</dd>
   <DTWithAnchor id="barrier">Barrier</DTWithAnchor>
-  <dd>Includes anything physical, architectural, technological or attitudinal, anything that is based on information or
-    communications or anything that is the result of a policy or a practice that hinders the full and equal participation
-    in society of persons with an impairment, including a physical, mental, intellectual, cognitive, learning, communication or
-    sensory impairment or a functional limitation.</dd>
+  <dd>Software tools that test for many accessibility barriers. While essential for developing and maintaining software, no automated tool can check for 
+    all Section 508 requirements. Automated testing is a necessary but insufficient part of an effective testing strategy.</dd>
   <DTWithAnchor id="commerical-off-the-shelf-cots">Commercial off-the-shelf (COTS)</DTWithAnchor>
   <dd>Software that can be purchased and implemented with little or no customization requirements.</dd>
   <DTWithAnchor id="content-management-system-cms">Content management system (CMS)</DTWithAnchor>
-  <dd>CMS is a software application used to oversee the operation of web information.
-    Common CMS applications include software like WordPress and Drupal.</dd>
-  <DTWithAnchor id="customer-experiece-cx-human-centered-design-hcd">Customer Experience (CX) / Human Centred Design (HCD)</DTWithAnchor>
+  <dd>A software application used to oversee the operation of web information. Common CMS applications include WordPress and Drupal.</dd>
+  <DTWithAnchor id="customer-experiece-cx-human-centered-design-hcd">Customer Experience (CX) / Human Centered Design (HCD)</DTWithAnchor>
   <dd>The totality of cognitive, affective, sensory, and behavioral responses during all stages of the process. Effective CX and HCD also
     includes people with disabilities.</dd>
   <DTWithAnchor id="disability">Disability</DTWithAnchor>
-  <dd>Any impairment, including a physical, mental, intellectual, cognitive, learning, communication or sensory impairment — or a functional limitation —
-    whether permanent, temporary or episodic in nature, or evident or not, that, in interaction with a barrier, hinders a person's
-    full and equal participation in society. </dd>
+  <dd>Any impairment—physical, mental, intellectual, cognitive, learning, communication, or sensory, whether permanent, temporary, episodic, or 
+    evident or not—that, in interaction with a barrier, hinders a person's full and equal participation in society. </dd>
   <DTWithAnchor id="discoverability">Discoverability</DTWithAnchor>
-  <dd>The ability of any feature to be found in the context in which it is needed.</dd>
+  <dd>The ability of a feature to be easily found in the context in which it is needed.</dd>
   <DTWithAnchor id="european-harmonized-accessibility-standards-en-301-549">European Harmonized Accessibility Standards (EN 301 549)</DTWithAnchor>
-  <dd>This is evolving to become the global standard for government policy.
-    This is an evolving standard that roughly follows and extends the WCAG Guidelines.</dd>
+  <dd>An evolving global standard for government policy that roughly follows and extends WCAG Guidelines.</dd>
   <DTWithAnchor id="false-positives">False positives</DTWithAnchor>
-  <dd>An error in data reporting in which a test result improperly indicates the presence of a condition.</dd>
+  <dd>AAn error in data reporting where a test result improperly indicates the presence of a condition.</dd>
   <DTWithAnchor id="government-off-the-shelf-cots">Government off-the-shelf (COTS)</DTWithAnchor>
   <dd>IT which is developed and maintained by the government</dd>
   <DTWithAnchor id="government-product-accessibility-template-gpat">Government Product Accessibility Template (GPAT)</DTWithAnchor>
-  <dd>A legacy ACR which was developed by a government agency. This is not currently being maintained.</dd>
+  <dd>A legacy ACR developed by a government agency. This template is no longer maintained.</dd>
   <DTWithAnchor id="graceful-degradation">Graceful degradation</DTWithAnchor>
-  <dd>When a site utilizes new technology and, if disabled, the content maintains effectiveness for the user.</dd>
+  <dd>A design approach where a site retains content effectiveness even if new technology features are disabled.</dd>
   <DTWithAnchor id="internationalization">Internationalization</DTWithAnchor>
-  <dd>A system whose primary design has been developed to work in multiple languages and in the cultural contexts of different locales.</dd>
+  <dd>A system designed to work in multiple languages and cultural contexts across different locales.</dd>
   <DTWithAnchor id="information-communications-technology-ict">Information Communications Technology (ICT)</DTWithAnchor>
-  <dd>ICT is an extensional term of the term information technology (IT).
-    It refers to the gambit of technology involved in digital communications.</dd>
+  <dd>ICT is an extension of information technology (IT), referring to the gamut of technology involved in digital communications.</dd>
   <DTWithAnchor id="lived-experience">Lived Experience</DTWithAnchor>
-  <dd>Testing with people who have lived experience of disability is ultimately the most valuable.</dd>
+  <dd>Testing conducted with people who have firsthand experience of disability, which is ultimately the most valuable form of testing.</dd>
   <DTWithAnchor id="localization">Localization</DTWithAnchor>
   <dd>Customizing or adapting a national or international product for a local market.</dd>
   <DTWithAnchor id="manual-testing">Manual Testing</DTWithAnchor>
-  <dd>With a little training, most people can do basic testing using just a keyboard (with no mouse). With additional training, users can
-  get a basic sense of how to use other assistive technology. Effective screen reader testing takes considerable experience.</dd>
+  <dd>With minimal training, most people can perform basic testing using only a keyboard, without a mouse. With further training, users 
+    can gain a general understanding of how to use other assistive technologies. Effective screen reader testing often requires considerable 
+    experience.</dd>
   <DTWithAnchor id="medical-model-of-disability">Medical model of disability</DTWithAnchor>
-  <dd>An understanding of disability based on the biomedical perception of disability. This model links a disability diagnosis
-    to an individual's physical body. The model supposes that this disability may reduce the individual's quality of life and
-    the aim is, with medical intervention, this disability will be diminished or corrected</dd>
+  <dd>An understanding of disability based on a biomedical perception. It links a disability diagnosis to an individual's physical condition, 
+    aiming to diminish or correct the disability through medical intervention.</dd>
   <DTWithAnchor id="open-source-software-oss">Open Source Software (OSS)</DTWithAnchor>
-  <dd>Software that is made freely available including possible modification and redistribution.
-    Products include permission to use the source code, design documents, or content of the product.</dd>
+  <dd>Software made freely available for modification and redistribution. Products include permission to use the source code, design documents, 
+    or content.</dd>
   <DTWithAnchor id="section-504">Section 504</DTWithAnchor>
-  <dd>Section 504 of the Rehabilitation Act of 1973. This act has implications for federal assistance and accommodation in the workplace.
-    If an organization receives federal support of any kind, even if the organization is not a federal or state organization,
-    the organization must comply with Section 504.</dd>
+  <dd>Section 504 of the Rehabilitation Act of 1973 mandates accommodations in the workplace and applies to entities receiving federal assistance. 
+    Any organization that receives federal support, regardless of whether it is a federal or state entity, is required to comply with the 
+    provisions of Section 504.</dd>
   <DTWithAnchor id="section-508">Section 508</DTWithAnchor>
-  <dd>Section 508 of the Rehabilitation Act was enacted to eliminate barriers in information technology, to make available new
-    opportunities for people with disabilities, and to encourage development of technologies that will help achieve these goals.
-    The law applies to all Federal agencies when they develop, procure, maintain, or use electronic and information technology.
-    Until the Section 508 Refresh, this requirement was based on best practices of 1998.</dd>
+  <dd>Section 508 of the Rehabilitation Act was established to remove barriers in information technology, create new opportunities for 
+    individuals with disabilities, and promote the development of technologies that support these objectives. The law applies to all 
+    federal agencies in the development, procurement, maintenance, or use of electronic and information technology. Prior to the Section 508 
+    Refresh, these requirements were based on the best practices established in 1998.</dd>
   <DTWithAnchor id="section-508-refresh">Section 508 Refresh</DTWithAnchor>
-  <dd>The Refresh brought the guidelines for the USA to be essentially the same as WCAG 2.0 AA.</dd>
+  <dd>An update aligning U.S. guidelines with WCAG 2.0 AA standards.</dd>
   <DTWithAnchor id="semantics">Semantics</DTWithAnchor>
-  <dd>Semantics is the idea of creating more meaning with the information in digital content.
-    This makes it easier for devices to understand what each aspect of the code means for the end user.
-    HTML5 markup has been optimized to allow developers to create more semantic markup.</dd>
+  <dd>Semantics refers to enhancing the meaning of information in digital content, making it easier for devices to interpret the purpose of each 
+    element for the end user. HTML5 markup has been designed to help developers create more meaningful and semantic code.</dd>
   <DTWithAnchor id="social-model-of-disability">Social model of disability</DTWithAnchor>
-  <dd>An approach to understanding disability which identifies systemic barriers, derogatory attitudes, and social exclusion
-    (intentional or inadvertent), which make it more difficult or impossible for people with disabilities to function.</dd>
+  <dd>An approach to understanding disability that focuses on systemic barriers, negative attitudes, and social exclusion—whether intentional or 
+    unintentional—that hinder or prevent people with disabilities from fully participating and functioning in society.</dd>
   <DTWithAnchor id="software-as-a-service-saas">Software as a service (SaaS)</DTWithAnchor>
-  <dd>A software licensing and delivery model in which software is licensed on a subscription basis and is centrally hosted</dd>
+  <dd>A software licensing and delivery model where software is centrally hosted and licensed on a subscription basis.</dd>
   <DTWithAnchor id="usability">Usability</DTWithAnchor>
   <dd>The principle that information and applications should not only be accessible but also easy to use and understand.</dd>
   <DTWithAnchor id="voluntary-product-accessibility-template-vpat">Voluntary Product Accessibility Template (VPAT™)</DTWithAnchor>
-  <dd>The most commonly used ACR format which is maintained by the Information Technology Industry Council.
-    It is a static document that describes how software, hardware, electronic content, and support documentation meet accessibility requirements.
-    VPATs often required in procurement to help buyers understand how accessible a product might be and help to discover deficiencies.</dd>
+  <dd>The most widely used ACR format, maintained by the Information Technology Industry Council, is the VPAT (Voluntary Product Accessibility Template). 
+    This static document outlines how software, hardware, electronic content, and support documentation meet accessibility standards. VPATs are commonly 
+    required during procurement to help buyers assess a product's accessibility and identify any shortcomings.</dd>
   <DTWithAnchor id="web-content-accessibility-guidelines-wcag">Web Content Accessibility Guidelines (WCAG) 2.0, 2.1, 2.2 & 3.0</DTWithAnchor>
-  <dd>WCAG 2.0 is focused on providing an international technical standard for web content.
-    It has 12 guidelines that are organized under four principles: Perceivable, Operable, Understandable, and Robust (ie. POUR).
-    The guidelines each have a testable success criteria, which are at three levels: A, AA, and AAA. The latest recommendation is 2.1,
-    2.2 is nearly published, and 3.0 is actively being developed.</dd>
+  <dd>WCAG 2.0 establishes an international technical standard for web content accessibility. It includes 12 guidelines grouped under four key principles: 
+    Perceivable, Operable, Understandable, and Robust (POUR). Each guideline features testable success criteria categorized into three levels: 
+    A, AA, and AAA. The most recent version is 2.1, with 2.2 nearing publication, and 3.0 currently under active development.</dd>
   <DTWithAnchor id="widget">Widget</DTWithAnchor>
-  <dd>A widget is a small application installed and used on websites. Each widget has a varying amount of purposes. An example of a widget is a small,
-    email newsletter signup form, or a third-party live chat functionality.</dd>
+  <dd>A widget is a small application embedded in websites to serve various purposes. Examples include an email newsletter signup form or a third-party 
+    live chat feature.</dd>
 </dl>
