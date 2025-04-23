@@ -47,11 +47,11 @@
     page lists the success criteria that you have checked and not checked.
   </li>
   <li>
-    You can export your report as YAML (structured data) but also as HTML (web page). Note: You will not be able
+    You can export your report as YAML (structured data) or as HTML (web page). Note: You will not be able
     to edit the report in the future without the YAML file.
   </li>
   <li>
-    You can add limited formatting to your report with <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">Markdown <span class="visuallyhidden">(opens in a new window or tab)</span></a>. This allows you to add
+    Add limited formatting to your report with <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">Markdown <span class="visuallyhidden">(opens in a new window or tab)</span></a>. This allows you to add
     lists, links and code examples.
   </li>
 </ul>
@@ -63,19 +63,19 @@
     <HeaderWithAnchor id="about-openacr" level=2>About OpenACR</HeaderWithAnchor>
   </summary>
   <p>
-    OpenACR is a digital native Accessibility Conformance Report (ACR). The initial development is based on Section 508 requirements.
-    There are many advantages in moving to a machine-readable format, but one of the biggest is that it allows accessibility claims of
-    digital products and services to be compared. Moving to a highly structured, self-validated document format will make this much simpler.
+    OpenACR is a digital-native Accessibility Conformance Report (ACR) initially developed to meet Section 508 requirements. One of its 
+    greatest advantages is its machine-readable format, enabling easier comparison of accessibility claims for digital products and 
+    services. By transitioning to a highly structured, self-validated document format, accessibility documentation becomes more 
+    consistent and efficient.
   </p>
   <p>
-    Many organizations face challenges in delivering accessible services to people with disabilities. Software vendors currently submit
-    ACRs for their offerings. These ACRs document conformance of these products and services. These claims are generally provided in a PDF
-    format which is often inaccessible, not consistently structured, and difficult to search. A modern ACR will be validated to see it
-    matches a baseline format.
+    Many organizations face challenges in delivering accessible services to people with disabilities. Currently, software vendors submit 
+    ACRs for their products and services. However, these ACRs are typically in PDF format, which is often inaccessible, inconsistently 
+    structured, and difficult to search. Modern ACRs will be validated to ensure they match a baseline format
   </p>
   <p>
-    Responsible organizations both review vendor conformance claims and do independent testing. Documenting these findings in a consistent format
-    will make it easier to provide feedback to vendors. Comparisons will make it easier to update reports.
+    Responsible organizations review vendor conformance claims and conduct independent testing. Documenting these findings in a 
+    consistent format streamlines feedback to vendors and simplifies report updates and comparisons.
   </p>
   <p>
     For more information, see <a href="https://github.com/GSA/openacr" target="_blank">OpenACR <span class="visuallyhidden">(opens in a new window or tab)</span></a>.
@@ -87,20 +87,20 @@
     <HeaderWithAnchor id="structure-of-this-tool" level=2>Structure of this tool</HeaderWithAnchor>
   </summary>
   <p>
-    Following the structure of OpenACR, this tool takes you through 7
-    <strong>tables/chapters</strong>. Each table/chapter has a number of
-    <strong>criteria</strong>, which are further divided into
-    <strong>components</strong>. For each, you can select
-    a level and type in a note about conformance.
+    Aligned with the OpenACR structure, this tool takes you through seven
+    <strong>tables/chapters</strong>. Each table/chapter contains various
+    <strong>criteria</strong>, divided into
+    <strong>components</strong>. For each component, you can: Select a level 
+    of conformance. Add a note about the conformance status.
   </p>
   <p>
-    A, AA, AAA are for the <strong>WCAG 2</strong> guidelines.
+    Levels: A, AA, AAA are for the <strong>WCAG 2</strong> guidelines.
   </p>
   <p>
-    FPC, Hardware, Software, Docs is the <strong>Section 508</strong> standards.
+    Categories: FPC, Hardware, Software, and Documentation align with the <strong>Section 508</strong> standards.
   </p>
   <p>
-    Links in this editor will open a new window that lead you to the relevant sections of the guidelines.
+    Links in this editor open new windows leading to the relevant guideline sections.
   </p>
 </details>
 
@@ -109,8 +109,8 @@
     <HeaderWithAnchor id="terms" level=2>Terms</HeaderWithAnchor>
   </summary>
   <p>
-    As you go through and enter conformance for your software, you will select a "term" for
-    each component. Here is the legend of what those selections mean:
+    When entering conformance information for your software, you will assign a "term" to each component. 
+    Below is a legend of these terms:
   </p>
   <dl>
     {#each catalog.terms as term}

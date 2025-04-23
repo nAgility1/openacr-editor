@@ -16,9 +16,9 @@
       update to show only the sections you need to fill out. If you need to
       change this later, update your responses to the product information questions.
     {:else if chapterId === "success_criteria_level_a"}
-      Provide information about Level A accessibility conformance with your website 
-      or web application. The default is
-      web-based, and there are optional fields for <a
+      Provide details about Level A or AA accessibility conformance with your website 
+      or web application. By default, the focus is on web-based content, but optional 
+      fields are available for <a
         href="#1.1.1-electronic-docs-editor"
         on:click={() => openFirstAccordion()}>Documentation</a
       >,
@@ -46,10 +46,9 @@
         on:click={() => openFirstAccordion()}>Authoring</a
       >. Fill out as appropriate.
     {:else if chapterId === "success_criteria_level_aaa"}
-      This section is optional. Consider including information about Level AAA
-      conformance in your website or web application. WCAG Level AAA represents
-      accessibility features that exceed the minimum requirements of Section
-      508. Additionally, some projects may have specific AAA requirements.
+    This section is optional. Consider including information about Level AAA conformance 
+    for your website or web application. WCAG Level AAA represents accessibility features that 
+    exceed the minimum requirements of Section 508. Additionally, some projects may specify specific AAA requirements.
     {:else if chapterId === "functional_performance_criteria"}
       Use this section to describe barriers here if they are not covered in other sections.
       Highlight the impact on different types of disabilities. Optionally, you can also 
