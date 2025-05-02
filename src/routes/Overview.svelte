@@ -28,7 +28,7 @@
 <Header>Overview</Header>
 
 <p>
-  This web editor helps evaluators build Accessibility Conformance Reports in the <a href="https://github.com/gsa/openacr" target="_blank">OpenACR format <span class="visuallyhidden">(opens in a new window or tab)</span></a>.
+  This web editor helps evaluators build Accessibility Conformance Reports in the <a href="https://github.com/gsa/openacr" target="_blank">OpenACR format.<span class="visuallyhidden">(opens in a new window or tab)</span></a>
   It is designed to assist accessibility subject matter experts create machine-readable OpenACR documents. Authors will be guided in creating an
   accessible report for the digital product or service that they are documenting. Conformance for each requirement can be documented as required
   to generate a Section 508 report.

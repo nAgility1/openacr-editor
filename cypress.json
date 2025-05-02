@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://localhost:10001",
+  "baseUrl": "http://localhost:10001/",
   "video": true,
   "videosFolder": "cypress/results",
   "reporter": "junit",
