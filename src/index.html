@@ -24,8 +24,8 @@
       rel="stylesheet"
       href="https://w3.org/WAI/assets/css/style.css?1573220675560713000"
     />
-    <link rel="stylesheet" href="./build/bundle.css" />
-    <script defer src="./build/bundle.js"></script>
+    <link rel="stylesheet" href="{{pathPrefix}}/build/bundle.css" />
+    <script defer src="{{pathPrefix}}/build/bundle.js"></script>
     <script>
       window.addEventListener('load', function() {
         console.log('Bundle loaded');
@@ -248,10 +248,10 @@
     <div id="header-508" class="section508-external-block"></div>
     <header id="site-header" class="default-grid with-gap">
       <div class="tool-header">
-        <a href="./">
+        <a href="{{pathPrefix}}/">
           <img
             alt="ACR Editor logo"
-            src="./images/Accessibility Conformance Report A4 White Horizontal (1).png"
+            src="{{pathPrefix}}/images/Accessibility Conformance Report A4 White Horizontal (1).png"
             height="50"
             style="margin-top: 3px"
             class="img"

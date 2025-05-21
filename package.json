@@ -49,9 +49,9 @@
   },
   "scripts": {
     "replace_vars": "mustache config/$NODE_ENV.json src/index.html > public/index.html",
-    "build": "npm run replace_vars && rollup -c",
-    "dev": "cross-env NODE_ENV=development && npm run replace_vars && rollup -c -w",
-    "start": "sirv public",
+    "build": "cross-env NODE_ENV=production && npm run replace_vars && rollup -c",
+    "dev": "NODE_ENV=development && npm run replace_vars && rollup -c -w",
+    "start": "sirv public --base /nih/openacr",
     "a11y-test": "pa11y-ci",
     "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider cypress run --browser chrome --headless"
 

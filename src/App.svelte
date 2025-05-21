@@ -17,6 +17,9 @@
   import vars from "../config/__buildEnv__.json";
   export let url = "";
 
+  // Add this line to store the base path
+  const basePath = vars.pathPrefix || "/nih/openacr";
+
   const pagesWithYourReport = ["Overview", "About", "Evaluation"];
 
   function needsYourReport(pageName) {
@@ -57,41 +60,41 @@
 
 <Router {url} basepath={vars.pathPrefix}>
   <Nav>
-    <NavItem to="/">Overview</NavItem>
-    <NavItem to="/about">About</NavItem>
+    <NavItem to={`${basePath}/`}>Overview</NavItem>
+    <NavItem to={`${basePath}/about`}>About</NavItem>
     {#each catalog.chapters as chapter}
       {#if chapter.id != "success_criteria_level_aa"}
-      <NavItem to="chapter/{chapter.id}">
+      <NavItem to=`${basePath}/chapter/${chapter.id}`>
         {chapter.short_label}
         <span class="visuallyhidden">: {chapter.label}</span>
       </NavItem>
       {/if}
     {/each}
-    <NavItem to="/report">Report</NavItem>
-    <NavItem to="/glossary">Glossary</NavItem>
-    <NavItem to="/acknowledgements">Acknowledgements</NavItem>
+    <NavItem to={`${basePath}/report`}>Report</NavItem>
+    <NavItem to={`${basePath}/glossary`}>Glossary</NavItem>
+    <NavItem to={`${basePath}/acknowledgements`}>Acknowledgements</NavItem>
   </Nav>
   <section
     id="content"
     class="app-content"
     class:app-content--wide={!needsYourReport($currentPage) || !$showYourReport}
     aria-label="Main content">
-    <Route path="/">
+    <Route path={`${basePath}`}>
       <Overview />
     </Route>
-    <Route path="/about">
+    <Route path={`${basePath}/about`}>
       <About />
     </Route>
     <Route path="/chapter/:chapterId" let:params>
       <Chapter chapterId={params.chapterId} />
     </Route>
-    <Route path="/report">
+    <Route path={`${basePath}/report`}>
       <Report />
     </Route>
-    <Route path="/acknowledgements">
+    <Route path={`${basePath}/acknowledgements`}>
       <Acknowledgements />
     </Route>
-    <Route path="/glossary">
+    <Route path={`${basePath}/glossary`}>
       <Glossary />
     </Route>
   </section>
