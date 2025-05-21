@@ -86,8 +86,7 @@ export default {
     !production &&
       serve({
         contentBase: "public",
-        historyApiFallback: true,
-        baseUrl: "/nih/openacr", // Add base path
+        historyApiFallback: true
       }),
 
     // Watch the `public` directory and refresh the

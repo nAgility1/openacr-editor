@@ -64,7 +64,7 @@
     <NavItem to={`${basePath}/about`}>About</NavItem>
     {#each catalog.chapters as chapter}
       {#if chapter.id != "success_criteria_level_aa"}
-      <NavItem to=`${basePath}/chapter/${chapter.id}`>
+      <NavItem to={`${basePath}/chapter/${chapter.id}`}>
         {chapter.short_label}
         <span class="visuallyhidden">: {chapter.label}</span>
       </NavItem>
