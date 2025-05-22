@@ -19,9 +19,6 @@
 
   // Add this line to store the base path
   const basePath = vars.pathPrefix;
-
-  console.log("Base path:", basePath);
-
   const pagesWithYourReport = ["Overview", "About", "Evaluation"];
 
   function needsYourReport(pageName) {
