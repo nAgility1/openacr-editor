@@ -17,8 +17,6 @@
   import vars from "../config/__buildEnv__.json";
   export let url = "";
 
-  // Add this line to store the base path
-  const basePath = vars.pathPrefix;
   const pagesWithYourReport = ["Overview", "About", "Evaluation"];
 
   function needsYourReport(pageName) {
@@ -59,41 +57,41 @@
 
 <Router {url} basepath={vars.pathPrefix}>
   <Nav>
-    <NavItem to={`${basePath}/`}>Overview</NavItem>
-    <NavItem to={`${basePath}/about`}>About</NavItem>
+    <NavItem to="/">Overview</NavItem>
+    <NavItem to="/about">About</NavItem>
     {#each catalog.chapters as chapter}
       {#if chapter.id != "success_criteria_level_aa"}
-      <NavItem to={`${basePath}/chapter/${chapter.id}`}>
+      <NavItem to="chapter/{chapter.id}">
         {chapter.short_label}
         <span class="visuallyhidden">: {chapter.label}</span>
       </NavItem>
       {/if}
     {/each}
-    <NavItem to={`${basePath}/report`}>Report</NavItem>
-    <NavItem to={`${basePath}/glossary`}>Glossary</NavItem>
-    <NavItem to={`${basePath}/acknowledgements`}>Acknowledgements</NavItem>
+    <NavItem to="/report">Report</NavItem>
+    <NavItem to="/glossary">Glossary</NavItem>
+    <NavItem to="/acknowledgements">Acknowledgements</NavItem>
   </Nav>
   <section
     id="content"
     class="app-content"
     class:app-content--wide={!needsYourReport($currentPage) || !$showYourReport}
     aria-label="Main content">
-    <Route path={`${basePath}`}>
+    <Route path="/">
       <Overview />
     </Route>
-    <Route path={`${basePath}/about`}>
+    <Route path="/about">
       <About />
     </Route>
     <Route path="/chapter/:chapterId" let:params>
       <Chapter chapterId={params.chapterId} />
     </Route>
-    <Route path={`${basePath}/report`}>
+    <Route path="/report">
       <Report />
     </Route>
-    <Route path={`${basePath}/acknowledgements`}>
+    <Route path="/acknowledgements">
       <Acknowledgements />
     </Route>
-    <Route path={`${basePath}/glossary`}>
+    <Route path="/glossary">
       <Glossary />
     </Route>
   </section>
