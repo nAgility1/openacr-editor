@@ -18,7 +18,9 @@
   export let url = "";
 
   // Add this line to store the base path
-  const basePath = vars.pathPrefix || "/nih/openacr";
+  const basePath = vars.pathPrefix;
+
+  console.log("Base path:", basePath);
 
   const pagesWithYourReport = ["Overview", "About", "Evaluation"];
 
