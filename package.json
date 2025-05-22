@@ -50,7 +50,7 @@
   "scripts": {
     "replace_vars": "mustache config/$NODE_ENV.json src/index.html > public/index.html",
     "build": "npm run replace_vars && rollup -c",
-    "dev": "NODE_ENV=development && npm run replace_vars && rollup -c -w",
+    "dev": "cross-env NODE_ENV=development && npm run replace_vars && rollup -c -w",
     "start": "sirv public",
     "a11y-test": "pa11y-ci",
     "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider cypress run --browser chrome --headless"
