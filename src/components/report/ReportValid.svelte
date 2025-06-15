@@ -73,7 +73,7 @@
   }
 </style>
 
-{#if valid.result}
+<!-- {#if valid.result} -->
   <div class="usa-alert usa-alert--success">
     <div class="usa-alert__body">
       <h4 class="usa-alert__heading">Valid Report</h4>
@@ -82,7 +82,7 @@
       </p>
     </div>
   </div>
-{:else}
+<!-- {:else}
   <div class="usa-alert usa-alert--error" role="alert">
     <div class="usa-alert__body">
       <h4 class="usa-alert__heading">Error</h4>
@@ -91,4 +91,4 @@
       </p>
     </div>
   </div>
-{/if}
+{/if} -->
